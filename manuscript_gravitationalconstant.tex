@@ -19,13 +19,13 @@
 \title{Could a more precise measurement of the gravitational constant lead to Planckian SI units?}
 % In a long title you can use \\ to force a line break at a certain location.
 
-\author{Prasenjit Saha}
-\email{psaha@physik.uzh.ch}
+\author{Michael Ebersold}
+\email{michael.ebersold@uzh.ch} 
 % If there were a second author at the same address, we would put another 
 % \author{} statement here.  Don't combine multiple authors in a single
 % \author statement.
-\author{Michael Ebersold}
-\email{michael.ebersold@uzh.ch} 
+\author{Prasenjit Saha}
+\email{psaha@physik.uzh.ch}
 % Please provide a full mailing address here.
 \affiliation{Physik-Institut, University of Zurich, Winterthurerstrasse 190, 8057 Zurich, Switzerland}
 
@@ -54,6 +54,7 @@ In the late 19th century, Max Planck was working on reports about the irreversib
 Planck units are defined in such a way that five universal physical constants are given by a numerical value of 1 when expressed in these units. Today the five constants are the speed of light in vacuum $c$, the gravitational constant $G$, the reduced Planck constant $\hbar$, the Boltzmann constant $k_B$ and the Coulomb constant $\left(4 \pi \epsilon_0\right)^{-1}$. Planck had defined them in a somewhat different form and did not adopt any electromagnetic unit. But the natural extension is to include the Coulomb constant, another possibility is to use the elementary charge $e$ to define a basic unit of charge \cite{Tomilin99}.\\
 These constants can each be linked with a fundamental theory in physics that is widely accepted and universal: $\hbar$ with quantum mechanics, $c$ with special relativity, $G$ with general relativity, $k_B$ with thermodynamics and statistical mechanics, and $e$ or $\left(4 \pi \epsilon_0\right)^{-1}$ with electrodynamics.\\
 
+
 The International System of Units (SI) is the commonly used system of measurement. Its beginnings go back to the French Revolution in 1799 as a precursor of the metric system was implemented. With the signing of the Convention of the Metre in 1875, new international prototypes of the metre and the kilogram were established. In the early twentieth century electromagnetic units joined the system and it underwent constant improvement, until in 1960 the modern form, called the Système International d'Unités (SI), was launched. Since the Mole joined the system of measurement in 1971, the SI unit system is in its present form.\\
 
 To come away from the definitions based on artefacts, specific physical states and idealized experiments and because it is technologically possible to measure physical constants to high accuracy, the International Committee for Weights and Measures (CIPM) has proposed new definitions of the SI base units, which likely will be adopted in fall 2018 at the next General Conference on Weights and Measures. The revision of the SI unit system in 2018 goes towards a Planckian based system, since the values of seven physical constants get fixed and thereby define the seven base units. 
@@ -61,7 +62,22 @@ To get a truly Planckian, hence ``most natural", basis for the SI, one would hav
 \begin{equation}
 \mathrm{s} = \sqrt{\frac{h \, G}{c^5}}.
 \end{equation}
-Because these three natural constants would have fixed numerical values, this definition is exact. Such a definition would lead to an SI system that is based on fundamental natural constants and therefore stable over time and realizable everywhere. Also completely new and more precise measurements could be designed without having to revise the definitions of the units \cite{Fischer16}. The big problem is, that the uncertainty in the measurements of $G$ is very large large. In Fig.~\ref{fig:Gmeasurements} the latest and most precise measurements of the gravitational constant are plotted together with the recommended CODATA value and its uncertainty. At first glance one notices, that the measured values are not even in good agreement with each other.\\
+
+\begin{equation}
+\begin{aligned}
+\mathrm{kg} &= 1.832\ldots \times 10^7
+               \left(\frac{G}{hc}\right)^{\!1/2} \\
+\mathrm{m}  &= 2.468\ldots \times 10^{34}
+               \left(\frac{c^3}{hG}\right)^{\!1/2} \\
+\mathrm{s}  &= 7.399\ldots \times 10^{42}
+               \left(\frac{c^5}{hG}\right)^{\!1/2} \\
+\mathrm{K}  &= 2.015\ldots \times 10^{-33}
+               \left(\frac{Gk^2}{hc^5}\right)^{\!1/2}
+\end{aligned}
+\end{equation}
+
+
+Because these four natural constants would have fixed numerical values, this definition is exact. Such a definition would lead to an SI system that is based on fundamental natural constants and therefore stable over time and realizable everywhere. Also completely new and more precise measurements could be designed without having to revise the definitions of the units \cite{Fischer16}. The big problem is, that the uncertainty in the measurements of $G$ is very large large. In Fig.~\ref{fig:Gmeasurements} the latest and most precise measurements of the gravitational constant are plotted together with the recommended CODATA value and its uncertainty. At first glance one notices, that the measured values are not even in good agreement with each other.\\
 
 The big problem that this approach faces, is that the current definition of the second which is based on the hyperfine splitting frequency in the Caesium 33 atom, is much more accurate. \\  
 
@@ -71,7 +87,7 @@ The big problem that this approach faces, is that the current definition of the 
 
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{img/plotGmeas.eps}
+	\includegraphics[width=\textwidth]{img/plotGmeas}
 	\caption{The data points represent six of the most recent measurement of the gravitational constant. The green line represents the recommended CODATA value and its uncertainty.}
 	\label{fig:Gmeasurements}
 \end{figure}
