@@ -16,7 +16,7 @@
 % to format your title page.  Don't use lower-level macros to  manually
 % adjust the fonts and centering.
 
-\title{Could a more precise measurement of the gravitational constant lead to Planckian SI units?}
+\title{A thought-experiment for a Planckian standard kilogram}
 % In a long title you can use \\ to force a line break at a certain location.
 
 \author{Michael Ebersold}
@@ -42,10 +42,61 @@ We present a new idea how the gravitational constant could be measured more prec
 \maketitle % title page is now complete
 
 
-\section{Introduction} % Section titles are automatically converted to all-caps.
-% Section numbering is automatic.
+\section{Introduction}
 
-In the late 19th century, Max Planck was working on reports about the irreversible process of radiation. He worked out a new entropy law to explain the empirical Wien law of radiation. This required him to introduce two new physical constants, which nowadays are known as the Planck constant and the Boltzmann constant \cite{Tomilin1999}. As a consequence, he described in 1899 a unit system which is based on fundamental natural constants only and thus free of anthropocentric arbitrariness. He pointed out the advantage of such a system in the following words:\cite{Planck99}\\
+The reform of SI units to use quantum standards is an ongoing `news
+story' in physics.  At the heart of the reform are two quantum
+phenomena that appear on macroscopic scales: the Josephson effect
+makes $h/e$ measurable as a voltage-to-frequency ratio, while the
+quantum Hall effect makes $h/e^2$ a standard resistance (the
+von~Klitzing constant).  These enable electrical units to be defined
+in terms of $h$ and $e$.  A further ingenious instrument, known as a
+watt balance, precisely compares electrical and mechanical power, thus
+enabled mass to be standardized in terms of $h$.  For an simple
+introduction to the new SI, we refer the reader to the article on the
+``LEGO watt balance''[citation].
+
+The proposed redefinition of the kilogram is as an explicit value for
+$h$ and $c$, but we can think of it as
+\begin{equation}
+\mathrm{kg} \equiv 1.3563925\ldots \times 10^{50} \, \mathrm{s}^{-1}
+                   \times \frac{h}{c^2}
+\end{equation}
+with the exact value to be decided.  As we can see, the kilogram is
+coupled to the definition of a second.  That is not a problem in
+practice, as the second is standardized orders of magnitude better
+than any other unit.  Nonetheless, it is interesting to consider a
+logical further step of decoupling the kilogram from other
+definitions.  This could be done by introducing the gravitational
+constant, since $\sqrt{hc/G}$ has dimensions of mass.  Historically,
+there have been several proposed unit systems that included $G$ in
+some way,\cite{Tomilin1999} but the idea of including both gravity and
+quantum in a unit system comes from Planck\cite{Planck99}.  In the
+process of working towards the radiation law, Planck realized that
+$c,G,h$ and the Boltzmann constant $k_B$ (in his notation
+$G\rightarrow f$, $h\rightarrow b$, $h/k_B\rightarrow a$) naturally
+define units for mass, length, time, and temperature.  (Planck
+remarked that such units would be meaningful even in non-human and
+extraterrestrial cultures.)
+
+
+
+\begin{equation}
+\begin{aligned}
+\mathrm{kg} &= 4.594\ldots \times 10^7
+               \left(\frac{\hbar c}{G}\right)^{\!1/2} \\
+\mathrm{m}  &= 6.187\ldots \times 10^{34}
+               \left(\frac{\hbar G}{c^3}\right)^{\!1/2} \\
+\mathrm{s}  &= 1.854\ldots \times 10^{43}
+               \left(\frac{\hbar G}{c^5}\right)^{\!1/2} \\
+\mathrm{K}  &= 7.058\ldots \times 10^{-33}
+               \left(\frac{\hbar c^5}{Gk_B^2}\right)^{\!1/2}
+\end{aligned}
+\end{equation}
+
+
+
+In the late 19th century, Max Planck was working on reports about the irreversible process of radiation. He worked out a new entropy law to explain the empirical Wien law of radiation. This required him to introduce two new physical constants, which nowadays are known as the Planck constant and the Boltzmann constant . As a consequence, he described in 1899 a unit system which is based on fundamental natural constants only and thus free of anthropocentric arbitrariness. He pointed out the advantage of such a system in the following words:\cite{Planck99}\\
 
 \begin{quote} ...ihre Bedeutung f\"{u}r alle Zeiten und f\"{u}r alle, auch au{\ss}erirdische und au{\ss}ermenschliche Kulturen notwendig behalten und welche daher als  ``nat\"{u}rliche Ma{\ss}einheiten" bezeichnet werden k\"{o}nnen... \end{quote}
 
@@ -53,6 +104,7 @@ In the late 19th century, Max Planck was working on reports about the irreversib
 
 Planck units are defined in such a way that five universal physical constants are given by a numerical value of 1 when expressed in these units. Today the five constants are the speed of light in vacuum $c$, the gravitational constant $G$, the reduced Planck constant $\hbar$, the Boltzmann constant $k_B$ and the Coulomb constant $\left(4 \pi \epsilon_0\right)^{-1}$. Planck had defined them in a somewhat different form and did not adopt any electromagnetic unit. But the natural extension is to include the Coulomb constant, another possibility is to use the elementary charge $e$ to define a basic unit of charge \cite{Tomilin99}.\\
 These constants can each be linked with a fundamental theory in physics that is widely accepted and universal: $\hbar$ with quantum mechanics, $c$ with special relativity, $G$ with general relativity, $k_B$ with thermodynamics and statistical mechanics, and $e$ or $\left(4 \pi \epsilon_0\right)^{-1}$ with electrodynamics.\\
+
 
 
 The International System of Units (SI) is the commonly used system of measurement. Its beginnings go back to the French Revolution in 1799 as a precursor of the metric system was implemented. With the signing of the Convention of the Metre in 1875, new international prototypes of the metre and the kilogram were established. In the early twentieth century electromagnetic units joined the system and it underwent constant improvement, until in 1960 the modern form, called the Système International d'Unités (SI), was launched. Since the Mole joined the system of measurement in 1971, the SI unit system is in its present form.\\
@@ -63,18 +115,6 @@ To get a truly Planckian, hence ``most natural", basis for the SI, one would hav
 \mathrm{s} = \sqrt{\frac{h \, G}{c^5}}.
 \end{equation}
 
-\begin{equation}
-\begin{aligned}
-\mathrm{kg} &= 1.832\ldots \times 10^7
-               \left(\frac{G}{hc}\right)^{\!1/2} \\
-\mathrm{m}  &= 2.468\ldots \times 10^{34}
-               \left(\frac{c^3}{hG}\right)^{\!1/2} \\
-\mathrm{s}  &= 7.399\ldots \times 10^{42}
-               \left(\frac{c^5}{hG}\right)^{\!1/2} \\
-\mathrm{K}  &= 2.015\ldots \times 10^{-33}
-               \left(\frac{Gk^2}{hc^5}\right)^{\!1/2}
-\end{aligned}
-\end{equation}
 
 
 Because these four natural constants would have fixed numerical values, this definition is exact. Such a definition would lead to an SI system that is based on fundamental natural constants and therefore stable over time and realizable everywhere. Also completely new and more precise measurements could be designed without having to revise the definitions of the units \cite{Fischer16}. The big problem is, that the uncertainty in the measurements of $G$ is very large large. In Fig.~\ref{fig:Gmeasurements} the latest and most precise measurements of the gravitational constant are plotted together with the recommended CODATA value and its uncertainty. At first glance one notices, that the measured values are not even in good agreement with each other.\\
