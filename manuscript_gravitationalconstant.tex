@@ -160,46 +160,62 @@ This new kind of measurement of the gravitational constant appears simple, but i
 
 \subsection{Disturbing effects}
 
-\textbf{Radiation pressure:} In space, there is a constant bombardment of radiation and charged particles from the sun, the so called solar wind. Thus the envelope of the cavity has to protect the two balls. Since the activity of the sun and the direction of the solar wind varies much, the spacecraft must be able to correct its position around the freely falling masses inside the cavity.\\
-Furthermore, there is thermal radiation inside the cavity, that could disturb the orbit. To estimate the force on a ball exerted by radiation, we use the Stefan-Boltzmann law. The radiation pressure $p_r$ can be written as a third of the energy density of the electromagnetic radiation. With fundamental thermodynamics one can relate the radiation pressure to the temperature $T$
+\textbf{Radiation pressure:} The envelope of the cavity needs to protect the two body-system from the constant bombardment of radiation and charged particles from the sun. Since the activity of the sun varies much, the spacecraft must be able to correct its position around the freely falling masses inside the cavity.\\
+Furthermore, there is thermal radiation inside the cavity, that could disturb the orbit.
+Using the Stefan-Boltzmann law, we can relate radiation pressure to the temperature inside the cavity. If we then specify to balls of radius $r$, we can express the force on the balls as 
 \begin{equation}
-\label{Stefan-Boltzmann}
-p_r = \frac{1}{3} u = \frac{1}{3} a T^4
+F = \frac{1}{3} \pi r^2 \sigma_a T^4.
 \end{equation}
-where the constant $a$ follows from Planck's radiation law and is
+with
 \begin{equation}
 \label{eq:a}
-a = \frac{8 \pi^5 {k_\mathrm{B}}^4}{15 c^3 h^3}.
+\sigma_a = \frac{8 \pi^5 {k_\mathrm{B}}^4}{15 c^3 h^3}
 \end{equation}
-We have now a direct relation between radiation pressure and the temperature in the cavity. Then we can estimate the force exerted on a ball of radius $r$ by just multiplying the pressure with the area
-\begin{equation}
-F = \frac{1}{3} \pi r^2 a T^4.
-\end{equation}
-As we can see, this force is highly temperature dependent. In order to minimize this influence, one should deploy a temperature as small as possible in the cavity. In fact, if a cooling system based on liquid helium is installed, temperature can be brought down to about 4 K. Such a low temperature results in a radiation pressure of about $10^{-14} \, \mathrm{N} \, \mathrm{m}^{-2}$, which leads to a force on the balls in the order of $10^{-16}$ N. Compared to the gravitational force, this is orders of magnitude less and thus we don't have to worry about effects of radiation pressure.\\
+being a constant that follows from Planck's radiation law.
+%
+%To estimate the force on a ball exerted by radiation, we use the Stefan-Boltzmann law. The radiation pressure $p_r$ can be written as a third of the energy density of the electromagnetic radiation and with fundamental thermodynamics one can relate the radiation pressure to the temperature $T$
+%
+%\begin{equation}
+%\label{Stefan-Boltzmann}
+%p_r = \frac{1}{3} u = \frac{1}{3} a T^4
+%\end{equation}
+%where the constant $a$ follows from Planck's radiation law and is
+%\begin{equation}
+%\label{eq:a}
+%a = \frac{8 \pi^5 {k_\mathrm{B}}^4}{15 c^3 h^3}.
+%\end{equation}
+%We have now a direct relation between radiation pressure and the temperature in the cavity. Then we can estimate the force exerted on a ball of radius $r$ by just multiplying the pressure with the area
+%\begin{equation}
+%F = \frac{1}{3} \pi r^2 a T^4.
+%\end{equation}
+%
+As we can see, this force is highly temperature dependent. In order to minimize this influence, one should deploy a temperature as small as possible in the cavity. In fact, if a cooling system based on liquid helium is installed, temperature can be brought down to about 4 K. Such a low temperature results in a force on the balls in the order of $10^{-16}$ N. Compared to the gravitational force, this is orders of magnitude less and thus we don't have to worry about effects of radiation pressure.\\
 
-\textbf{Influence of the position measurement:} In general, one has to pay attention as soon as one undertakes a measurement on a physical system, because every measurement can disturb the system. In this case we have a laser that measures the position of two masses which are in an orbit but the photons from the laser exerts an additional force on the masses. To give a rough estimation of this influence, we can compare the radiation pressure of the laser with the one of thermal radiation in the cavity, which we estimated before. In terms of the power $P$ of the laser and the area of the balls $A$, the radiation pressure is
-\begin{equation}
-\label{eq:radpress}
-p_r = \frac{P}{c\,A}.
-\end{equation}
-On behalf of minimizing the impact of the position measurement, a laser with small power should be used. If we assume a laser with a power of 1 mW, the radiation pressure is in the order of $10^{-10} \, \mathrm{N} \, \mathrm{m}^{-2}$. This is a factor of $10^4$ more than radiation pressure of thermal radiation in the cavity, but the laser doesn't have to shoot photons on the balls constantly. Only for the actual measurement a short pulse has to be sent. If this pulse has a duration of less than roughly $0.1$ ms, its disturbing effect on the orbit is in the same range as the effect of thermal radiation and is thus negligible too.\\
-
+\textbf{Influence of the position measurement:} 
+The photons of the laser that measures the position of the two balls exert an additional force. If a laser with a power of 1 mW is used and not more than five measurements every second are performed, the force on the balls is in the same order as the influence of thermal radiation and thus negligible too.\\
+%
+%In general, one has to pay attention as soon as one undertakes a measurement on a physical system, because every measurement can disturb the system. In this case we have a laser that measures the position of two masses which are in an orbit but the photons from the laser exerts an additional force on the masses. To give a rough estimation of this influence, we can compare the radiation pressure of the laser with the one of thermal radiation in the cavity, which we estimated before. In terms of the power $P$ of the laser and the area of the balls $A$, the radiation pressure is
+%\begin{equation}
+%\label{eq:radpress}
+%p_r = \frac{P}{c\,A}.
+%\end{equation}
+%On behalf of minimizing the impact of the position measurement, a laser with small power should be used. If we assume a laser with a power of 1 mW, the radiation pressure is in the order of $10^{-10} \, \mathrm{N} \, \mathrm{m}^{-2}$. This is a factor of $10^4$ more than radiation pressure of thermal radiation in the cavity, but the laser doesn't have to shoot photons on the balls constantly. Only for the actual measurement a short pulse has to be sent. If this pulse has a duration of less than roughly $0.1$ ms, its disturbing effect on the orbit is in the same range as the effect of thermal radiation and is thus negligible too.\\
+%
 \textbf{Coulomb force:}
-Since the electromagnetic force is orders of magnitude stronger than the gravitational force, the balls must be absolutely neutral. A possible source of charges are cosmic rays or the solar wind, so they have to be protected as good as possible. If we want that the Coulomb force between the balls is in the order of $10^{-16} \,\mathrm{N}$ or smaller, and thus negligible, the maximal allowed charge on the balls is about $6 \cdot 10^{-14}\,\mathrm{C}$, which corresponds to roughly $4 \cdot 10^5$ elementary charges.\\
+Since the electromagnetic force is orders of magnitude stronger than the gravitational force, the balls must be absolutely neutral. A possible source of charges are cosmic rays or the solar wind, so they have to be protected as good as possible. If we want that the Coulomb force between the balls is in the same order as the effect of thermal radiation and thus negligible, the maximal allowed charge on the balls is about $6 \cdot 10^{-14}\,\mathrm{C}$, which corresponds to roughly $4 \cdot 10^5$ elementary charges.\\
 
-\textbf{Coriolis effect}
+\textbf{Coriolis effect:}
 \label{sec:coriolis}
-The Coriolis force is a fictitious force which only acts on moving bodies in a rotating reference frame. If we imagine the spacecraft located stationary at a Lagrange point of the earth-sun system, it is situated in a rotating frame around the earth-sun barycenter. With respect to this frame, the balls are on their orbit in movement. Thus, there will be a Coriolis acceleration
+The Coriolis force is a fictitious force which only acts on moving bodies in a rotating reference frame. If we imagine the spacecraft located stationary at a Lagrange point of the earth-sun system, it is situated in a rotating frame around the earth-sun barycenter. Since the balls are moving with respect to this frame, there will be a Coriolis acceleration
 \begin{equation}
 \label{eq:coriolis}
 \ddot{\vec{r}}_\mathrm{c} = - 2 \; \vec{\omega} \times \dot{\vec{r}}.
 \end{equation}
-Here $\vec{\omega}$ is the angular velocity vector of the rotating frame and $\dot{\vec{r}}$ is the velocity vector in the two-body system. Since we don't know the exact orientation of our system with respect to the earth-sun orbital plane, we will have to fit for it.\\
+In this formula $\vec{\omega}$ is the angular velocity vector of the rotating frame and $\dot{\vec{r}}$ is the velocity vector in the two-body system.\\
 
-\textbf{Centrifugal and tidal forces}
+\textbf{Centrifugal and tidal forces:}
 \label{sec:tidal}
-The two masses in the spacecraft should be in a free fall and only feel their respective gravitational attraction. But this is not possible to achieve for both masses simultaneously.\\
-Since we are in a non-inertial, rotating frame, there is a centrifugal force. The centrifugal acceleration $\ddot{\vec{r}}_{\mathrm{Z}}$ is proportional to the distance vector $\vec{r}$ and scales with $\omega^2$, where $\omega$ is the angular velocity of the sun-earth reference frame:
+The free fall condition is not possible to achieve for both masses simultaneously since we are in a non-inertial, rotating frame and therefore have to account for centrifugal forces. The centrifugal acceleration $\ddot{\vec{r}}_{\mathrm{Z}}$ is proportional to the distance vector $\vec{r}$ and scales with $\omega^2$, where $\omega$ is the angular velocity of the sun-earth reference frame:
 \begin{equation}
 \label{eq:centrifugalacc}
 \ddot{\vec{r}}_{\mathrm{Z}} = \vec{\omega} \times \left( \vec{\omega} \times \vec{r} \right) 
@@ -209,11 +225,29 @@ On the other hand, there are tidal forces. Imagine if one mass is closer to the 
 \label{eq:tidalacc}
 \ddot{\vec{r}}_{\mathrm{\tau}} \approx \frac{2 \, G \, M_\odot}{R^3} \, \vec{r}.
 \end{equation}
-In this equation $M_\odot$ is the solar mass and $R$ is the radius of the orbit around the sun. With Kepler's third law one can rewrite the tidal acceleration as a function of the orbital period squared of the sun-earth reference frame. Thus it scales the same way as the centrifugal force. The effect is off course tiny, since the system under consideration is much smaller compared to the earth-sun system. To estimate the magnitude of the centrifugal and tidal acceleration relative to the gravitational acceleration between the two balls, we find that their ratio is proportional to the orbital periods squared
+In this equation $M_\odot$ is the solar mass and $R$ is the radius of the orbit around the sun. With Kepler's third law one can rewrite the tidal acceleration as a function of the orbital period squared of the sun-earth reference frame. Thus it scales the same way as the centrifugal force. To estimate the magnitude of the centrifugal and tidal acceleration relative to the gravitational acceleration between the two balls, we find that their ratio is proportional to the orbital periods squared
 \begin{equation}\label{a_ratio}
 \frac{\ddot{r}_{\mathrm{\tau}}}{\ddot{r}_\mathrm{G}} \propto \frac{P^2}{{P_\odot}^2} \approx 10^{-7},
 \end{equation}
-here $P_\odot$ corresponds to one year, whereas $P$ is the orbital period of the two balls. So tidal and centrifugal effects are about $10^{-7}$ times smaller than the respective gravity of the two balls.
+here $P_\odot$ corresponds to one year, whereas $P$ is the orbital period of the two balls. So tidal and centrifugal effects are about $10^{-7}$ times smaller than the respective gravity of the two balls.\\
+
+\textbf{Gravitational field:}
+Much attention has to be paid to the effect of the gravitational field of the spacecraft itself and the measurement apparatus. This certainly can't be neglected, but with a clever design, its effects can be minimized. For example an almost spherically symmetric spacecraft would probably be a good choice. It should also be possible to calculate the gravitational field caused by the components of the spacecraft at the positions of the balls. Then one can correct the equation of motion by adding an extra term that is accounting for the gravitational field. \\
+A source of an additional gravitational field is earth's moon and the other planets in the solar system. Fortunately, for this we don't need to correct if the whole system, consisting of the spacecraft and the two-body system, is moving through space together. Although, the spacecraft should be able to correct its position around the two balls to avoid a collision.\\
+
+
+\section{Extracting $G$ from position measurement data}
+
+Now we are going to simulate position data of the two balls that the laser interferometry measurement would provide. From this data we then try to recover the parameters in the orbital equation of motion and thus also the gravitational constant. But first we have to find the orbital equation of motion for the two balls.\\
+
+\subsection{Orbital equation of motion}
+From Newtonian dynamics the equation of motion for a two-body system is given by 
+\begin{equation}
+\label{eq:eomeasy}
+\ddot{\vec{r}} = - \frac{G M\, \vec{r}}{r^3}.
+\end{equation}
+
+
 In choosing the reference frame such that the net force in the system barycenter is zero, we can correct with a term in the equations of motion for the two-body system, which is proportional to the distance. Because we are in a 3-dimensional space, and possibly the influences of the different axis could mix, we have to multiply the distance vector $\vec{r}$ with a symmetric $3 \times 3$ matrix $C$, such that  
 \begin{equation}
 \label{eq:tidal}
@@ -225,25 +259,10 @@ or in terms of the individual components
 \left(\ddot{r}_\mathrm{C}\right)_i = \sum_{k=1}^{3} C_{ik} \: r_k.
 \end{equation}
 The matrix $C$ has six individual components which are not exactly known presumably, we will set constraints to their values and then fit for them. \\
-
-\textbf{Gravitational field:}
-A source of an additional gravitational field is earth's moon and the other planets in the solar system. Fortunately, for this we don't need to correct if the whole system, consisting of the spacecraft and the two-body system, is moving on a geodesic through space. Although, the spacecraft should be able to correct its position around the two balls to avoid a collision.
-However, much attention has to be paid to the effect of the gravitational field of the spacecraft itself and the measurement apparatus. This certainly can't be neglected, but with a clever design, its effects can be minimized. For example an almost spherically symmetric spacecraft would probably be a good choice. Its gravitational field doesn't have to vanish perfectly, because first order corrections are absorbed in the matrix $C$, for which will be fitted anyway. \\
-If this is not practicable or the effects are still too large, it should be possible to calculate the gravitational field caused by the components of the spacecraft at the positions of the balls. Then one can correct the equation of motion by adding an extra term that is accounting for this gravitational field. \\
-
-
-
-\section{Extracting $G$ from simulated data}
-
-Now we are going to simulate position data of the two balls that the laser interferometry measurement would provide. From this data we then try to recover the parameters in the orbital equation of motion and thus also the gravitational constant. But first we have to find the orbital equation of motion for the two balls.\\
-
-\subsection{Orbital equation of motion}
-From Newtonian dynamics the equation of motion for a two-body system is given by 
-\begin{equation}
-\label{eq:eomeasy}
-\ddot{\vec{r}} = - \frac{G M\, \vec{r}}{r^3}.
-\end{equation}
 Here $M$ denotes the sum of the masses $m_1$ and $m_2$, $G$ is the gravitational constant and $r$ is the relative distance between the two bodies. This equation just describes the motion of the two-body system. There are no forces acting on the center of mass, so the whole system is moving on a geodesic together with the spacecraft. For simplicity we will abbreviate the product of $GM$ with $k$.\\
+
+
+
 Since our two-body system is in a rotating frame and there are perhaps other perturbations, we have to add the terms developed before for the Coriolis effect and the other corrections. Thus, the equation of motion for the two balls looks as follows:
 \begin{equation}
 \label{eq:eom}
