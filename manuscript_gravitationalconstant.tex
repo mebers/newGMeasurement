@@ -58,7 +58,7 @@ in terms of $h$ and $e$.  A further ingenious instrument, known as a
 watt balance, precisely compares electrical and mechanical power, thus
 enabled mass to be standardized in terms of $h$.  For an simple
 introduction to the new SI, we refer the reader to the article on the
-``LEGO watt balance''[2015AmJPh..83..913C].
+``LEGO watt balance''[2015AmJPh..83..913C]\cite{Chao15}.
 
 The proposed redefinition of the kilogram is as an explicit value for
 $h$ and $c$, but we can think of it as
@@ -105,7 +105,7 @@ units is straightforward, but we will not discuss it here.  The Planck
 length, time, and temperature in themselves are extreme scales, not
 probed by any known physical process, and presumably the regime of
 quantum gravity.  But extreme scales do not harm if they are only part
-of some pression, as they are here.  The Planck mass is small but
+of some expression, as they are here.  The Planck mass is small but
 microscopically measurable: $\sim20\mu\mathrm{g}$.  This is of the
 same order as the uncertainty in the prototype kilogram itself.  Hence
 the kilogram could be redefined as an integer multiple of the Planck
@@ -323,9 +323,6 @@ In the next step, we set the parameters to a fixed ``true" value within the rang
 
 To simulate data we would obtain from the position measurements, we integrate the equations of motion. The time for one orbit without perturbations can be estimated using Kepler's third law (\ref{eq:kepler3}). For the value of $k$ assumed above and a semi-major axis of $0.15 \, \mathrm{m}$, this results in an orbital period of roughly $12900 \, \mathrm{seconds}$ or $3.5 \, \mathrm{hours}$. Here we integrate two orbits in $100000$ steps, that would correspond to about $4$ measurements per second, which should be feasible. To the generated data, we add normal distributed noise with a standard deviation of $10 \, \mathrm{nm}$. This uncertainty stays for a systematic error in the laser interferometry measurement and also random statistic noise. Its value is just an estimation, it would depend highly on the measurement system that has been used.\\
 
-A useful way to look at the samples of the posterior returned by the MCMC is doing a corner plot using a Python module named \textit{corner}\cite{corner}. The corner plot shows all the one and two dimensional projections of the posterior probability distributions and demonstrates quickly the covariances between parameters. Along the diagonal, the marginalized distribution for each parameter independently is shown.
-In Fig.~\ref{fig:plotCorner4} an excerpt of the full corner plot is shown. Here we only depict the parameters $x_0$, $v_{y_0}$, $\omega_z$, $C_{xx}$ and $k$. These are the more important ones, because for example the main contribution to $\vec{\omega}$ comes from its $z$-component.\\
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1.0\textwidth]{img/4cornerfit.png}
@@ -333,18 +330,35 @@ In Fig.~\ref{fig:plotCorner4} an excerpt of the full corner plot is shown. Here 
 	\label{fig:plotCorner4}
 \end{figure}
 
-To arrive at a best value for $k$ and an uncertainty, we take the median and the percentiles corresponding to one sigma from the distribution of the parameter $k$. For this example we get:
-\begin{equation}\label{eq:kfit}
-k = \left( 8.0088006 \, \substack{+0.0000005 \\ -0.0000008}\, \right) \cdot 10^{-10}
-\end{equation}
-Now we divide $k$ by the total mass of the two balls. Note, that we assume, that the uncertainty on the mass of the balls does not contribute to a larger uncertainty on $G$, because their mass should be determinable to a relative uncertainty of about $10^{-8}$, whereas the one of $k$ is roughly $10^{-7}$. We change the way to write the uncertainty from the 0.16 and 0.84 percentiles to the usual standard deviation, while adding some margin. With units put back in, we arrive at the following value for the gravitational constant $G$:
+A useful way to look at the samples of the posterior returned by the MCMC is doing a corner plot using a Python module named \textit{corner}\cite{corner}. The corner plot shows all the one and two dimensional projections of the posterior probability distributions and demonstrates quickly the covariances between parameters. Along the diagonal, the marginalized distribution for each parameter independently is shown.
+In Fig.~\ref{fig:plotCorner4} an excerpt of the full corner plot is shown. \\
+%
+%Here we only depict the parameters $x_0$, $v_{y_0}$, $\omega_z$, $C_{xx}$ and $k$. These are the more important ones, because for example the main contribution to $\vec{\omega}$ comes from its $z$-component.\\
+%
+
+
+To arrive at a best value with uncertainty for the gravitational constant, we take the mean and standard deviation of the marginalized distribution of the parameter $k$ and divide by the total mass of the balls. In this example the relative uncertainty of $k$ is roughly $10^{-7}$, so if the masses are measured to about the same precision, we can write for the gravitational constant $G$:
 \begin{equation}\label{Gfit}
 G = \left(6.674005 \pm 0.000001 \right) \cdot 10^{-11}  \frac{\mathrm{m}^3}{\mathrm{kg \, s}^2}
 \end{equation}
 This corresponds to a relative uncertainty of $1.5 \cdot 10^{-7}$ or 15 parts in a hundred million.\\
 
+%
+%we take the median and the percentiles corresponding to one sigma from the distribution of the parameter $k$. For this example we get:
+%\begin{equation}\label{eq:kfit}
+%k = \left( 8.0088006 \, \substack{+0.0000005 \\ -0.0000008}\, \right) \cdot 10^{-10}
+%\end{equation}
+%Now we divide $k$ by the total mass of the two balls. Note, that we assume, that the uncertainty on the mass of the balls does not contribute to a larger uncertainty on $G$, because their mass should be determinable to a relative uncertainty of about $10^{-8}$, whereas the one of $k$ is roughly $10^{-7}$. We change the way to write the uncertainty from the 0.16 and 0.84 percentiles to the usual standard deviation, while adding some margin. With units put back in, we arrive at the following value for the gravitational constant $G$:
+%\begin{equation}\label{Gfit}
+%G = \left(6.674005 \pm 0.000001 \right) \cdot 10^{-11}  \frac{\mathrm{m}^3}{\mathrm{kg \, s}^2}
+%\end{equation}
+%This corresponds to a relative uncertainty of $1.5 \cdot 10^{-7}$ or 15 parts in a hundred million.\\
+%
 
 \section{Conclusion}
+We have proposed a new way to measure the gravitational constant $G$ and estimated on what order of magnitude different disturbing effects occur and if one has to correct for them. We then simulated measurement data and showed how to extract the gravitational constant. Based on our estimations, it should be possible to measure the gravitational constant to about $10^{-7}$ relative uncertainty. This is a about a factor of 300 better than today's recommended CODATA value.\\
+If we are a bit optimistic, a further increase in precision is not out of reach, so that about the same relative uncertainty as for Planck's constant $h$ ($1.2 \cdot 10^{-8}$)\cite{CODATA16} could be achieved. This then would allow to redefine the kilogram as an integer multiple of the Planck mass.\\
+
 
 
 
@@ -353,26 +367,21 @@ This corresponds to a relative uncertainty of $1.5 \cdot 10^{-7}$ or 15 parts in
 
 \section{Uninteresting stuff}
 
-Appendices are for material that is needed for completeness but
-not sufficiently interesting to include in the main body of the paper.  Most
-articles don't need any appendices, but feel free to use them when
-appropriate.  This sample article needs an appendix only to illustrate how 
-to create an appendix.
+%Appendices are for material that is needed for completeness but
+%not sufficiently interesting to include in the main body of the paper.  Most
+%articles don't need any appendices, but feel free to use them when
+%appropriate.  This sample article needs an appendix only to illustrate how 
+%to create an appendix.
 
 
 \begin{acknowledgments}
-
 Need acknowledgments?
 \end{acknowledgments}
 
 
 \begin{thebibliography}{99}
 
-\bibitem{vanRavenzwaaij16} D. van Ravenzwaji, and P. Cassey, and S. D. Brown, ``A simple introduction to Markov Chain Monte-Carlo sampling,'' 
-Psychonomic Bulletin {\&} Review, 1--12 (2016).  
-% Note that the issue number (10) in this citation is required, because
-% each issue of Physics Today starts over with page 1.  Also note the use of
-% an en-dash (--), not a hyphen (-), for the page range.
+\bibitem{Chao15} L.S. Chao, S. Schlamminger, D.B. Newell, J.R. Pratt, F. Seifert, X. Zhang, G. Sineriz, M. Liu and D. Haddad, ``A LEGO Watt balance: An apparatus to determine a mass based on the new SI", \textit{American Journal of Physics}, 83:11:913--922 (August 2015).
 
 \bibitem{Tomilin1999} D. K. Tomilin, ``Natural Systems of Units. To the Centenary Anniversary of the Planck System,'' 
 Proceedings of the XXII Workshop on high Energy Physics and field theory, 290 (1999).  
@@ -380,26 +389,23 @@ Proceedings of the XXII Workshop on high Energy Physics and field theory, 290 (1
 \bibitem{Planck99} M. Planck, ``\"{U}ber irreversible {S}trahlungsvorg\"{a}nge,'' 
 Sitzungsberichte der K\"{o}niglich Preussischen Akademie der Wissenschaften zu Berlin, 479--480 (1899).  
 
-\bibitem{Tomilin99} D. K. Tomilin, ``Fine-structure constant and dimension analysis,'' 
-European Journal of Physics (20.5), L39 (1999).  
+\bibitem{Quinn14} T. Quinn, C. Speake, H. Parks and R. Davis, ``The BIPM measurements of the Newtonian constant of gravitation $G$'', \textit{Philosophical Transactions of the Royal Society of London A: Mathematical, Physical and Engineering Sciences}, 372(2026) (September 2014).
 
-\bibitem{Fischer16} J. Ullrich, and J. Fischer, ``The new system of units,'' 
-Nature Physics (12.1), 4--7 (2016).  
+\bibitem{Newman14} R. Newman, M. Bantel, E. Berg and W. Cross, ``A measurement of $G$ with a cryogenic torsion pendulum'', \textit{Philosophical Transactions of the Royal Society of London A: Mathematical, Physical and Engineering Sciences}, 372(2026) (September 2014).
 
-\bibitem{Quinn14} T. Quinn, C. Speake, H. Parks and R. Davis, ``The BIPM measurements of the Newtonian constant of gravitation $G$'', \textit{Philosophical Transactions of the Royal Society of London A: Mathematical, Physical and Engineering Sciences}, 372(2026) (September 2014)
+\bibitem{Luo09} J. Luo, W. Liu, L. Tu, C. Shao, L.Liu, S. Yang, Q. Li and Y. Zhang, ``Determination of the Newtonian gravitational constant $G$ with time-of-swing method'', \textit{Phys. Rev. Lett.}, 102:240801 (June 2009).
 
-\bibitem{Newman14} R. Newman, M. Bantel, E. Berg and W. Cross, ``A measurement of $G$ with a cryogenic torsion pendulum'', \textit{Philosophical Transactions of the Royal Society of London A: Mathematical, Physical and Engineering Sciences}, 372(2026) (September 2014)
+\bibitem{Schlamminger06} S. Schlamminger, E. Holzschuh, W. Kündig, F. Nolting, R.E. Pixley, J. Schnurr and U. Straumann, ``Measurement of Newton's gravitational constant", \textit{Phys. Rev. D}, 74:082001 (October 2009).
 
-\bibitem{Luo09} J. Luo, W. Liu, L. Tu, C. Shao, L.Liu, S. Yang, Q. Li and Y. Zhang, ``Determination of the Newtonian gravitational constant $G$ with time-of-swing method'', \textit{Phys. Rev. Lett.}, 102:240801 (June 2009)
+\bibitem{Parks10} H.V. Parks and J.E. Faller, ``Simple pendulum determination of the gravitational constant", \textit{Phys. Rev. Lett.}, 105:110801 (September 2010).
 
-\bibitem{Schlamminger06} S. Schlamminger, E. Holzschuh, W. Kündig, F. Nolting, R.E. Pixley, J. Schnurr and U. Straumann, ``Measurement of Newton's gravitational constant", \textit{Phys. Rev. D}, 74:082001 (October 2009)
-
-\bibitem{Parks10} H.V. Parks and J.E. Faller, ``Simple pendulum determination of the gravitational constant", \textit{Phys. Rev. Lett.}, 105:110801 (September 2010)
-
-\bibitem{Rosi14} G. Rosi, F. Sorrentino, L. Cacciapuoti, M. Prevedelli and G.M. Tino, ``Precision measurement of the Newtonian gravitational constant using cold atoms", \textit{Nature}, 510:518-521 (June 2014)
+\bibitem{Rosi14} G. Rosi, F. Sorrentino, L. Cacciapuoti, M. Prevedelli and G.M. Tino, ``Precision measurement of the Newtonian gravitational constant using cold atoms", \textit{Nature}, 510:518-521 (June 2014).
 
 \bibitem{esopycoffee} Fast and easy-to-implement Markov Chain Monte Carlo with the emcee package, ESO PyCoffee (2014),
 \url{<http://eso-python.github.io/ESOPythonTutorials/ESOPythonDemoDay8_MCMC_with_emcee.html>}.
+
+\bibitem{vanRavenzwaaij16} D. van Ravenzwaji, and P. Cassey, and S. D. Brown, ``A simple introduction to Markov Chain Monte-Carlo sampling,'' 
+Psychonomic Bulletin {\&} Review, 1--12 (2016).
 
 \bibitem{Loughridge13} R. Loughridge, and D. Y. Abramovitch, ``A tutorial on laser interferometry for precision measurements,'' 
 American Control Conference, 3686--3703 (2013).  
@@ -407,6 +413,7 @@ American Control Conference, 3686--3703 (2013).
 \bibitem{corner} Daniel Foreman-Mackey, ``corner.py: Scatterplot matrices in Python,'' 
 The Journal of Open Source Software (10), (2016).  
 
+\bibitem{CODATA16} P.J. Mohr, D.B. Newell and B.N. Taylor, ``CODATA recommended values of the fundamental physical constants: 2014*, \textit{Reviews of Modern Physics}, 88(3):035009 (July 2016).
 
 \end{thebibliography}
 
