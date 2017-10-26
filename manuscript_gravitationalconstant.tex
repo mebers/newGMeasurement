@@ -37,28 +37,33 @@
 The kilogram could, in principle, be redefined as an integer multiple
 of the Planck mass (or 4594xxxx$\times\sqrt{\hbar c/G}$) with no
 significant change from its current value.  The practical hurdle is
-measuring $G$ three or four orders of magnitude than presently known,
-so as to find the unknown digits xxxx.  We study a possible scenario
-for doing so with an artificial two-body orbit.  Requirements for
-suppressing perturbing effects (notably tidal forces and radiation
-pressure), and obtaining the desired signal-to-noise are estimated.
+measuring $G$ three or four orders of magnitude better than currently
+known, so as to find the unknown digits xxxx.  We study a possible
+scenario for doing so with an artificial two-body orbit.  The cleanest
+(admittedly, not the cheapest) option is to place the system on a
+trojan orbit to minimize external gravitational perturbations, and
+enclose it in a cavity chilled to liquid-helium temperatures, to
+suppress radiation pressure.  Data analysis would involve
+marginalizing over at least 15~nuisance parameters (6~for orbital
+parameters and 9~for fictitious forces) but that, we show, is
+feasible.
 \end{abstract}
 
 \maketitle
 
 \section{Introduction}
 
-The reform of SI units to use quantum standards is an ongoing `news
-story' in physics.  At the heart of the reform are two quantum
+The reform of SI units to use quantum standards is an ongoing ``news
+story'' in physics.  At the heart of the reform are two quantum
 phenomena that appear on macroscopic scales: the Josephson effect
 makes $h/e$ measurable as a voltage-to-frequency ratio, while the
 quantum Hall effect makes $h/e^2$ a standard resistance (the
 von~Klitzing constant).  These enable electrical units to be defined
 in terms of $h$ and $e$.  A further ingenious instrument, known as a
 watt balance, precisely compares electrical and mechanical power, thus
-enabled mass to be standardized in terms of $h$.  For an simple
+enabled mass to be standardized in terms of $h$.  For a simple
 introduction to the new SI, we refer the reader to the article on the
-``LEGO watt balance''[2015AmJPh..83..913C]\cite{Chao15}.
+``LEGO watt balance''\cite{Chao15}.
 
 The proposed redefinition of the kilogram is as an explicit value for
 $h$ and $c$, but we can think of it as
@@ -77,12 +82,12 @@ constant, since $\sqrt{hc/G}$ has dimensions of mass.
 Historically, there have been several proposed unit systems that
 included $G$ in some way,\cite{Tomilin1999} but the idea of including
 both gravity and quantum mechanics in a unit system comes from
-Planck\cite{Planck99}.  In the process of working towards the
-radiation law, Planck realized that $c,G,h$ and the Boltzmann constant
-$k_B$ (in his notation $G\rightarrow f$, $h\rightarrow b$,
-$h/k_B\rightarrow a$) naturally define units for mass, length, time,
-and temperature.  (Planck remarked that such units would be meaningful
-even in non-human and extraterrestrial cultures.)
+Planck.\cite{Planck99} In the process of working towards the radiation
+law, Planck realized that $c,G,h$ and the Boltzmann constant $k_B$ (in
+his notation $G\rightarrow f$, $h\rightarrow b$, $h/k_B\rightarrow a$)
+naturally define units for mass, length, time, and temperature.
+Indeed, Planck remarked that such units would be meaningful even in
+non-human and extraterrestrial cultures.
 
 A hypothetical Planckian SI unit system would have
 \begin{equation} \label{eq:defs}
@@ -100,16 +105,16 @@ A hypothetical Planckian SI unit system would have
 with the numerical coefficients chosen so as to match the present
 standards.  The square-rooted expressions are conventionally known as
 the Planck mass, Planck length, and so on.  (They are actually
-$\sqrt{2\pi}$ times Planck's definitions.)  Extension to electrical
-units is straightforward, but we will not discuss it here.  The Planck
-length, time, and temperature in themselves are extreme scales, not
-probed by any known physical process, and presumably the regime of
-quantum gravity.  But extreme scales do not harm if they are only part
-of some expression, as they are here.  The Planck mass is small but
-microscopically measurable: $\sim20\mu\mathrm{g}$.  This is of the
-same order as the uncertainty in the prototype kilogram itself.  Hence
-the kilogram could be redefined as an integer multiple of the Planck
-mass, without significantly perturbing its value.
+$\sqrt{2\pi}$ smaller than Planck's definitions.)  Extension to
+electrical units is straightforward, but we will not discuss it here.
+The Planck length, time, and temperature in themselves are extreme
+scales, not probed by any known physical process, and presumably the
+regime of quantum gravity.  But extreme scales do not harm if they are
+only part of some expression, as they are here.  The Planck mass is
+small but microscopically measurable: $\sim20\mu\mathrm{g}$.  This is
+of the same order as the uncertainty in the prototype kilogram itself.
+Hence the kilogram could be redefined as an integer multiple of the
+Planck mass, without significantly perturbing its value.
 
 The difficulty with Eq.~\eqref{eq:defs} is that all the expressions
 involve $G$.  Given the current uncertainties in $G$,
@@ -117,12 +122,11 @@ Eq.~\eqref{eq:defs} would allow units to be standardized only to four
 significant digits, which is obviously not enough.  Improvement by
 several orders of magnitude would be needed, to make the Planckian
 kilogram practicable.  In this paper, we study a scenario which may
-make such an improvement possible.  A Planckian second not a prospect
-with anything like present technology, because demands on the time
-standard are more stringent still.\\
-
-
-
+make such an improvement possible.  The same process would suffice to
+move the Kelvin scale to a Planckian basis as well.  A Planckian
+second or metre, however, are not a prospect with anything like
+present technology, because demands on the time standard are more
+stringent still.
 
 \begin{figure}
 	\centering
@@ -133,17 +137,45 @@ standard are more stringent still.\\
 
 \section{A new approach to measure $G$}
 
-In Fig.~\ref{fig:Gmeasurements} we have plotted some of the most recent measurements of the gravitational constant. Three of them have been carried out using a torsion balance (BIPM-14\cite{Quinn14}, UCI-14\cite{Newman14}, HUST-09\cite{Luo09}), UZur-06\cite{Schlamminger06} used a beam balance and JILA-10\cite{Parks10} measured the separation of two simple pendulums in a gravitational field. They all tried to measure the very weak gravitational force with a mechanical apparatus. The sixth measurement (LENS-14\cite{Rosi14}) was performed under another approach, using cold atom interferometry. Its uncertainty is a lot larger than the others, but it could become more competitive in the future. However, a brief glance on the plotted measurements shows the disagreement of current $G$-values and suggests a demand for new, potentially different techniques.\\ 
+In Fig.~\ref{fig:Gmeasurements} we plot the best-known recent
+measurements of the gravitational constant. Three of them
+(BIPM-14,\cite{Quinn14} UCI-14,\cite{Newman14}, and
+HUST-09\cite{Luo09}) were carried out using a torsion balance, whereas
+UZur-06\cite{Schlamminger06} used a beam balance, and
+JILA-10\cite{Parks10} measured the separation of two simple pendulums
+in a gravitational field. They all tried to measure the very weak
+gravitational force with a mechanical apparatus. The sixth measurement
+(LENS-14\cite{Rosi14}) was performed with another approach, using cold
+atom interferometry. Its uncertainty is a lot larger than the others,
+but it could become more competitive in the future. However, a brief
+glance on the plotted measurements shows the disagreement of current
+$G$-values and suggests a demand for new, potentially different
+techniques.
 
 
-
-\subsection{Description of new measurement}
-Newton's law of gravitation does not only explain why an apple falls down from a tree, it also explains orbits. If one has two bodies of masses $m_1$ and $m_2$, on which the only force acting is their respective gravitational attraction, they will orbit around their common barycenter in an ellipse described by Kepler's laws. The third law, given in Eq.~(\ref{eq:kepler3}), states that the square of the orbital period $P$ is directly proportional to the cube of the semimajor axis $a$. In this proportionality factor, the gravitational constant $G$ appears.
+\subsection{An artificial two-body gravitating system}
+Newton's law of gravitation does not only explain why an apple falls
+down from a tree, it also explains orbits. If one has two bodies of
+masses $m_1$ and $m_2$, on which the only force acting is their
+respective gravitational attraction, they will orbit around the common
+common center of mass, with the relative vector tracing an ellipse
+described by Kepler's laws. The third law, relates the
+orbital period $P$ to semimajor axis $a$ of the ellipse, as
 \begin{equation}\label{eq:kepler3}
 P^2 = \frac{4 \, \pi^2}{G(m_1+m_2)}a^3
 \end{equation}
-If one can measure the position of the two masses very accurately and thus knows the orbit, it is possible to deduce the gravitational constant. 
-So what we need is a freely falling two-body system. The only way to achieve this over some time, is to go to space. Thus, one has to design a spacecraft involving a cavity that contains the two masses and a position measurement apparatus. The cavity should shield the two-body system from environmental influences. The spacecraft is then put in space, preferably to a Lagrange point of the earth-sun system, in order to prevent large tidal forces.\\
+with the gravitational constant $G$ appearing in the proportionality
+factor.  If one can measure the position of the two masses very
+accurately and thus know the orbit, it is possible to deduce the
+gravitational constant.  So what we need is a freely-falling two-body
+system. The only way to achieve this over some time, is to go into
+space. Thus, one has to design a spacecraft with a cavity that
+contains the two masses and a position measurement apparatus. The
+cavity should shield the two-body system from environmental
+influences. The spacecraft is then put in space, at a location where
+tidal forces are minimal.  The stable Lagrange points of the Earth-Sun
+system (that is, $L_4$ or $L_5$, also known as the Earth-Trojan
+locations) would be suitable.
 
 \begin{figure}
 	\centering
@@ -152,11 +184,27 @@ So what we need is a freely falling two-body system. The only way to achieve thi
 	\label{fig:sketch}
 \end{figure}
 
-To get a feeling what the dimensions of such an experiment could be, choose for example lead balls with a diameter of about 10 cm, their mass then is about 6 kg. If one then chooses a semimajor axis of 15 cm, the orbital period would be roughly 3.5 hours and the gravitational force acting between the two bodies is of order $10^{-8}$ N. In Fig.~\ref{fig:sketch} we show a sketch on how this would look like.
-For getting an improvement in the precision of the gravitational constant, the positions of the two balls have to be known very accurately. Best suitable would probably be a laser interferometry system, which can yield precisions down to some nanometers.\cite{Loughridge13}
-The main difference to other techniques is that position measurements can be very accurate compared to directly measuring the gravitational force.
-This new kind of measurement of the gravitational constant appears simple, but it brings various difficulties with it. It is practically impossible to have a clean system, where only the respective gravitational force is acting between the two bodies, so one has to find out what effects could possibly disturb the system and then either make them as small as possible or correct for them. \\
+To get a feeling what the dimensions of such an experiment could be,
+choose for example lead balls with a diameter of about 10~cm, their
+mass then is about 6~kg. If one then chooses a semimajor axis of
+15~cm, the orbital period would be roughly 3.5~hours and the
+gravitational force acting between the two bodies is of order
+$10^{-8}$N.  In Fig.~\ref{fig:sketch} we show a sketch on how this
+would look like.  To follow the mutual orbit of the two balls, best
+would be a laser interferometry system, which can yield precisions
+down to some nanometers.\cite{Loughridge13}
 
+Such a system, if it could be set up, promises two advantages.  One is
+the avoidance of any mechanical contact with the gravitating parts of
+the experiment.  The other advantage lies in the behavior of signal
+and noise.  The signal, which is essentially the distance travelled,
+is proportional to time.  The noise, however, would be almost
+time-independent.  This suggests that signal-to-noise would be
+proportional to the length of the experiment, until it was limited by
+systematic error.  The achievable accuracy would therefore depend
+entirely on how well external perturbations to the gravitational
+two-body problem could be eliminated, or corrected for.  In following,
+we consider the expected perturbations.
 
 \subsection{Disturbing effects}
 
@@ -412,3 +460,13 @@ The Journal of Open Source Software (10), (2016).
 \end{thebibliography}
 
 \end{document}
+
+@INPROCEEDINGS{2016APS..APR.R5001S,
+   author = {{Schlamminger}, S.},
+    title = ``{Measurements of the gravitational constant - why we need new ideas}'',
+booktitle = {APS April Meeting Abstracts},
+     year = 2016,
+    month = mar,
+   adsurl = {http://adsabs.harvard.edu/abs/2016APS..APR.R5001S},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
