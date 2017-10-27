@@ -63,7 +63,7 @@ in terms of $h$ and $e$.  A further ingenious instrument, known as a
 watt balance, precisely compares electrical and mechanical power, thus
 enabled mass to be standardized in terms of $h$.  For a simple
 introduction to the new SI, we refer the reader to the article on the
-``LEGO watt balance''\cite{Chao15}.
+``LEGO watt balance''.\cite{Chao15}
 
 The proposed redefinition of the kilogram is as an explicit value for
 $h$ and $c$, but we can think of it as
@@ -208,7 +208,7 @@ we consider the expected perturbations.
 
 \subsection{Disturbing effects}
 
-\textbf{Radiation pressure:} The envelope of the cavity needs to protect the two body-system from the constant bombardment of radiation and charged particles from the sun. Since the activity of the sun varies much, the spacecraft must be able to correct its position around the freely falling masses inside the cavity.\\
+\textbf{Radiation pressure:} The envelope of the cavity needs to protect the two body-system from the constant bombardment of radiation and charged particles from the Sun. Since the activity of the Sun varies much, the spacecraft must be able to correct its position around the freely falling masses inside the cavity.\\
 Furthermore, there is thermal radiation inside the cavity, that could disturb the orbit.
 Using the Stefan-Boltzmann law, we can relate radiation pressure to the temperature inside the cavity. If we then specify to balls of radius $r$, we can express the force on the balls as 
 \begin{equation}
@@ -244,38 +244,38 @@ The photons of the laser that measures the position of the two balls exert an ad
 %On behalf of minimizing the impact of the position measurement, a laser with small power should be used. If we assume a laser with a power of 1 mW, the radiation pressure is in the order of $10^{-10} \, \mathrm{N} \, \mathrm{m}^{-2}$. This is a factor of $10^4$ more than radiation pressure of thermal radiation in the cavity, but the laser doesn't have to shoot photons on the balls constantly. Only for the actual measurement a short pulse has to be sent. If this pulse has a duration of less than roughly $0.1$ ms, its disturbing effect on the orbit is in the same range as the effect of thermal radiation and is thus negligible too.\\
 %
 \textbf{Coulomb force:}
-Since the electromagnetic force is orders of magnitude stronger than the gravitational force, the balls must be absolutely neutral. A possible source of charges are cosmic rays or the solar wind, so they have to be protected as good as possible. If we want that the Coulomb force between the balls is in the same order as the effect of thermal radiation and thus negligible, the maximal allowed charge on the balls is about $6 \cdot 10^{-14}\,\mathrm{C}$, which corresponds to roughly $4 \cdot 10^5$ elementary charges.\\
+Since the electromagnetic force is orders of magnitude stronger than the gravitational force, the balls must be absolutely neutral. A possible source of charges are cosmic rays or the solar wind, so the two bodies have to be adequately shielded by the enclosing shell.  If we want that the Coulomb force between the balls is in the same order as the effect of thermal radiation and thus negligible, the maximal allowed charge on the balls is about $6 \cdot 10^{-14}\,\mathrm{C}$, which corresponds to roughly $4 \cdot 10^5$ elementary charges.
 
 \textbf{Coriolis effect:}
 \label{sec:coriolis}
-The Coriolis force is a fictitious force which only acts on moving bodies in a rotating reference frame. If we imagine the spacecraft located stationary at a Lagrange point of the earth-sun system, it is situated in a rotating frame around the earth-sun barycenter. Since the balls are moving with respect to this frame, there will be a Coriolis acceleration
+The Coriolis force is a fictitious force which only acts on moving bodies in a rotating reference frame. If we imagine the spacecraft located stationary at a Lagrange point of the Earth-Sun system, it is situated in a rotating frame around the Earth-Sun barycenter. Since the balls are moving with respect to this frame, there will be a Coriolis acceleration
 \begin{equation}
 \label{eq:coriolis}
 \ddot{\vec{r}}_\mathrm{c} = - 2 \; \vec{\omega} \times \dot{\vec{r}}.
 \end{equation}
-In this formula $\vec{\omega}$ is the angular velocity vector of the rotating frame and $\dot{\vec{r}}$ is the velocity vector in the two-body system.\\
+In this formula $\vec{\omega}$ is the angular velocity vector of the rotating frame and $\dot{\vec{r}}$ is the velocity vector in the two-body system.
 
 \textbf{Centrifugal and tidal forces:}
 \label{sec:tidal}
-The free fall condition is not possible to achieve for both masses simultaneously since we are in a non-inertial, rotating frame and therefore have to account for centrifugal forces. The centrifugal acceleration $\ddot{\vec{r}}_{\mathrm{Z}}$ is proportional to the distance vector $\vec{r}$ and scales with $\omega^2$, where $\omega$ is the angular velocity of the sun-earth reference frame:
+The free fall condition is not possible to achieve for both masses simultaneously since we are in a non-inertial, rotating frame and therefore have to account for centrifugal forces. The centrifugal acceleration $\ddot{\vec{r}}_{\mathrm{Z}}$ is proportional to the distance vector $\vec{r}$ and scales with $\omega^2$, where $\omega$ is the angular velocity of the Sun-Earth reference frame:
 \begin{equation}
 \label{eq:centrifugalacc}
 \ddot{\vec{r}}_{\mathrm{Z}} = \vec{\omega} \times \left( \vec{\omega} \times \vec{r} \right) 
 \end{equation}
-On the other hand, there are tidal forces. Imagine if one mass is closer to the sun-earth barycenter, the gravitational force on it is slightly bigger than on the other mass. This results in a correction proportional to the distance too. One can approximate the tidal acceleration as
+In addition, there are tidal forces. If one mass is closer to the Sun, the gravitational force on it is slightly bigger than on the other mass. This results in a force perturbation, which is also proportional to $r$. One can approximate the tidal acceleration as
 \begin{equation}
 \label{eq:tidalacc}
 \ddot{\vec{r}}_{\mathrm{\tau}} \approx \frac{2 \, G \, M_\odot}{R^3} \, \vec{r}.
 \end{equation}
-In this equation $M_\odot$ is the solar mass and $R$ is the radius of the orbit around the sun. With Kepler's third law one can rewrite the tidal acceleration as a function of the orbital period squared of the sun-earth reference frame. Thus it scales the same way as the centrifugal force. To estimate the magnitude of the centrifugal and tidal acceleration relative to the gravitational acceleration between the two balls, we find that their ratio is proportional to the orbital periods squared
+In this equation $M_\odot$ is the solar mass and $R$ is the radius of the orbit around the Sun. With Kepler's third law one can rewrite the tidal acceleration as a function of the orbital period squared of the Sun-Earth reference frame. Thus it scales the same way as the centrifugal force. To estimate the magnitude of the centrifugal and tidal acceleration relative to the gravitational acceleration between the two balls, we find that their ratio is proportional to the orbital periods squared
 \begin{equation}\label{a_ratio}
 \frac{\ddot{r}_{\mathrm{\tau}}}{\ddot{r}_\mathrm{G}} \propto \frac{P^2}{{P_\odot}^2} \approx 10^{-7},
 \end{equation}
-here $P_\odot$ corresponds to one year, whereas $P$ is the orbital period of the two balls. So tidal and centrifugal effects are about $10^{-7}$ times smaller than the respective gravity of the two balls.\\
+where $P_\odot$ corresponds to one year, whereas $P$ is the orbital period of the two balls. So tidal and centrifugal effects are about $10^{-7}$ times smaller than the respective gravity of the two balls.
 
 \textbf{Gravitational field:}
 Much attention has to be paid to the effect of the gravitational field of the spacecraft itself and the measurement apparatus. This certainly can't be neglected, but with a clever design, its effects can be minimized. For example an almost spherically symmetric spacecraft would probably be a good choice. It should also be possible to calculate the gravitational field caused by the components of the spacecraft at the positions of the balls. Then one can correct the equation of motion by adding an extra term that is accounting for the gravitational field. \\
-A source of an additional gravitational field is earth's moon and the other planets in the solar system. Fortunately, for this we don't need to correct if the whole system, consisting of the spacecraft and the two-body system, is moving through space together. Although, the spacecraft should be able to correct its position around the two balls to avoid a collision.\\
+A source of an additional gravitational field is Earth's moon and the other planets in the solar system. Fortunately, for this we don't need to correct if the whole system, consisting of the spacecraft and the two-body system, is moving through space together. Although, the spacecraft should be able to correct its position around the two balls to avoid a collision.\\
 
 
 \section{Extracting $G$ from position measurement data}
@@ -308,7 +308,7 @@ So the full equation of motion for the two balls looks as follows:
 \ddot{\vec{r}} = - \frac{k\,\vec{r}}{r^3} - 2 \; \vec{\omega} \times \dot{\vec{r}} + C \cdot \vec{r}
 \end{equation}
 These are actually three coupled equations of motion, one for each coordinate axis. Since all are second order differential equations, this leaves us with six initial conditions. In other words to determine the orbit, we need to give six starting values.\\
-We choose our coordinate system such that the orbital plane of the two-body system is in the $x-y$ plane. $\vec{\omega}$ is a constant vector that points in the direction of the rotation axis of the earth-sun reference frame. We will fit for $\vec{\omega}$, so we don't have to know it exactly before, but it can be estimated well and thus provides good starting points for the fit. The same is valid for the six components of the matrix $C$.\\
+We choose our coordinate system such that the orbital plane of the two-body system is in the $x-y$ plane. $\vec{\omega}$ is a constant vector that points in the direction of the rotation axis of the Earth-Sun reference frame. We will fit for $\vec{\omega}$, so we don't have to know it exactly before, but it can be estimated well and thus provides good starting points for the fit. The same is valid for the six components of the matrix $C$.\\
 
 Counting all unknown parameters in the equation of motion, we get 16. They correspond to 6 initial conditions, 6 components of the matrix $C$, 3 components of the vector $\vec{\omega}$ and the object of main interest, $k$,  which contains the gravitational constant ($k = GM$). Fitting for so many parameters is not an easy task, but it should be possible because the parameters are not completely unknown.\\
 
@@ -321,7 +321,7 @@ A Markov chain Monte-Carlo method is a Bayesian approach to data analysis. It us
 
 We briefly explain in what range the values of the parameters are estimated and display it in table~\ref{tab:parameters}.
 For the parameter $k$, which is the product of the gravitational constant $G$ and the total mass $M$ we look at the current measured values for the gravitational constant in Fig.~\ref{fig:Gmeasurements}, it is reasonable to constrain its numerical value in SI units to values between $6.671 \cdot 10^{-11}$ and $6.676 \cdot 10^{-11}$. The masses of the two balls will not contribute to a larger uncertainty in $k$, we choose them to be 6 kg.\\
-The vector $\vec{\omega}$ accounts for the rotation of the reference frame. If we say that the orbit of the balls lies in the same plane as the orbital plane of the earth, $\vec{\omega}$ will point in $z$ - direction with $x$ and $y$ components small. Thus $\omega_z$ is associated with the period $P_\odot$ of one year through $2\pi/P_\odot$. Because the rotation axis are conceivably not exactly aligned, we add some uncertainty. As mentioned before, the $x$ and $y$ components are small, so to say roughly in the range of the uncertainty in $w_z$.\\
+The vector $\vec{\omega}$ accounts for the rotation of the reference frame. If we say that the orbit of the balls lies in the same plane as the orbital plane of the Earth, $\vec{\omega}$ will point in $z$ - direction with $x$ and $y$ components small. Thus $\omega_z$ is associated with the period $P_\odot$ of one year through $2\pi/P_\odot$. Because the rotation axis are conceivably not exactly aligned, we add some uncertainty. As mentioned before, the $x$ and $y$ components are small, so to say roughly in the range of the uncertainty in $w_z$.\\
 The main contribution to the tidal term goes with $\omega^2$ and lies in the orbital plane. We are free to choose the $x$ and $y$ axis, so we choose it such that it is in $x$-direction. The other five components then should be smaller, but we give some extra range to account for possible other perturbations.\\
 % 
 %To estimate the six components of the matrix $C$, we first state again that the barycentre of the two balls is in free fall. So at this point all forces cancel out. If we imagine the ball on its orbit, the tidal force is stronger when its nearer to the earth-sun barycentre and the centrifugal force is stronger when it is in the opposite position. So over an orbit, the effect on the balls stays constant. Also other perturbations are assumed to be constant, at least during some orbits.
