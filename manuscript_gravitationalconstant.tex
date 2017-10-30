@@ -37,19 +37,24 @@
 The kilogram could, in principle, be redefined as an integer multiple
 of the Planck mass (or 4594xxxx$\times\sqrt{\hbar c/G}$) with no
 significant change from its current value.  The practical hurdle is
-measuring $G$ three or four orders of magnitude more precisely than presently known,
-so as to find the unknown digits xxxx.  We study a possible scenario
-for doing so with an artificial two-body orbit.  Requirements for
-suppressing perturbing effects (notably tidal forces and radiation
-pressure), and obtaining the desired signal-to-noise are estimated.
+measuring $G$ three or four orders of magnitude better than currently
+known, so as to find the unknown digits xxxx.  We study a possible
+scenario for doing so with an artificial two-body orbit.  The cleanest
+(admittedly, not the cheapest) option is to place the system on a
+trojan orbit to minimize external gravitational perturbations, and
+enclose it in a cavity chilled to liquid-helium temperatures, to
+suppress radiation pressure.  Data analysis would involve
+marginalizing over at least 15~nuisance parameters (6~for orbital
+parameters and 9~for fictitious forces) but that, we show, is
+feasible.
 \end{abstract}
 
 \maketitle
 
 \section{Introduction}
 
-The reform of SI units to use quantum standards is an ongoing `news
-story' in physics.  At the heart of the reform are two quantum
+The reform of SI units to use quantum standards is an ongoing ``news
+story'' in physics.  At the heart of the reform are two quantum
 phenomena that appear on macroscopic scales: the Josephson effect
 makes $h/e$ measurable as a voltage-to-frequency ratio, while the
 quantum Hall effect makes $h/e^2$ a standard resistance (the
@@ -58,8 +63,7 @@ in terms of $h$ and $e$.  A further ingenious instrument, known as a
 watt balance, precisely compares electrical and mechanical power, thus
 enabled mass to be standardized in terms of $h$.  For a simple
 introduction to the new SI, we refer the reader to the article on the
-``LEGO watt balance''[2015AmJPh..83..913C].\cite{Chao15}
-
+``LEGO watt balance''.\cite{Chao15}
 The proposed redefinition of the kilogram is as an explicit value for
 $h$ and $c$, but we can think of it as
 \begin{equation}
@@ -73,16 +77,15 @@ than any other unit.  Nonetheless, it is interesting to consider a
 logical further step of decoupling the kilogram from other
 definitions.  This could be done by introducing the gravitational
 constant, since $\sqrt{hc/G}$ has dimensions of mass.
-
 Historically, there have been several proposed unit systems that
 included $G$ in some way,\cite{Tomilin1999} but the idea of including
 both gravity and quantum mechanics in a unit system comes from
-Planck.\cite{Planck99}  In the process of working towards the
-radiation law, Planck realized that $c,G,h$ and the Boltzmann constant
-$k_B$ (in his notation $G\rightarrow f$, $h\rightarrow b$,
-$h/k_B\rightarrow a$) naturally define units for mass, length, time,
-and temperature.  (Planck remarked that such units would be meaningful
-even in non-human and extraterrestrial cultures.)
+Planck.\cite{Planck99} In the process of working towards the radiation
+law, Planck realized that $c,G,h$ and the Boltzmann constant $k_B$ (in
+his notation $G\rightarrow f$, $h\rightarrow b$, $h/k_B\rightarrow a$)
+naturally define units for mass, length, time, and temperature.
+Indeed, Planck remarked that such units would be meaningful even in
+non-human and extraterrestrial cultures.
 
 A hypothetical Planckian SI unit system would have
 \begin{equation} \label{eq:defs}
@@ -100,16 +103,16 @@ A hypothetical Planckian SI unit system would have
 with the numerical coefficients chosen so as to match the present
 standards.  The square-rooted expressions are conventionally known as
 the Planck mass, Planck length, and so on.  (They are actually
-$\sqrt{2\pi}$ times Planck's definitions.)  Extension to electrical
-units is straightforward, but we will not discuss it here.  The Planck
-length, time, and temperature themselves are extreme scales, not
-probed by any known physical process, and presumably the regime of
-quantum gravity.  But extreme scales do not harm if they are only part
-of some expression, as they are here.  The Planck mass is small but
-microscopically measurable: $\sim20\mu\mathrm{g}$.  This is of the
-same order as the uncertainty in the prototype kilogram itself.\cite{BIPM}  Hence
-the kilogram could be redefined as an integer multiple of the Planck
-mass, without significantly perturbing its value.
+$\sqrt{2\pi}$ smaller than Planck's definitions.)  Extension to
+electrical units is straightforward, but we will not discuss it here.
+The Planck length, time, and temperature in themselves are extreme
+scales, not probed by any known physical process, and presumably the
+regime of quantum gravity.  But extreme scales do not harm if they are
+only part of some expression, as they are here.  The Planck mass is
+small but microscopically measurable: $\sim20\mu\mathrm{g}$.  This is
+of the same order as the uncertainty in the prototype kilogram itself.
+Hence the kilogram could be redefined as an integer multiple of the
+Planck mass, without significantly perturbing its value.
 
 The difficulty with Eq.~\eqref{eq:defs} is that all the expressions
 involve $G$.  Given the current uncertainties in $G$,\cite{CODATA16}
@@ -117,10 +120,11 @@ Eq.~\eqref{eq:defs} would allow units to be standardized only to four
 significant digits, which is obviously not enough.  Improvement by
 several orders of magnitude would be needed, to make the Planckian
 kilogram practicable.  In this paper, we study a scenario which may
-make such an improvement possible.  A Planckian second is not a prospect
-with anything like present technology, because demands on the time
-standard are more stringent still.\\
-
+make such an improvement possible.  The same process would suffice to
+move the Kelvin scale to a Planckian basis as well.  A Planckian
+second or metre, however, are not a prospect with anything like
+present technology, because demands on the time standard are more
+stringent still.
 
 \begin{figure}
 	\centering
@@ -130,17 +134,44 @@ standard are more stringent still.\\
 \end{figure}
 
 \section{A new approach to measure $G$}
+In Fig.~\ref{fig:Gmeasurements} we plot the best-known recent
+measurements of the gravitational constant. Three of them
+(BIPM-14,\cite{Quinn14} UCI-14,\cite{Newman14}, and
+HUST-09\cite{Luo09}) were carried out using a torsion balance, whereas
+UZur-06\cite{Schlamminger06} used a beam balance, and
+JILA-10\cite{Parks10} measured the separation of two simple pendulums
+in a gravitational field. They all tried to measure the very weak
+gravitational force with a mechanical apparatus. The sixth measurement
+(LENS-14\cite{Rosi14}) was performed with another approach, using cold
+atom interferometry. Its uncertainty is a lot larger than the others,
+but it could become more competitive in the future. However, a brief
+glance on the plotted measurements shows the disagreement of current
+$G$-values and suggests a demand for new, potentially different
+techniques.
 
-In Fig.~\ref{fig:Gmeasurements} we have plotted some of the most recent measurements of the gravitational constant. Three of them have been carried out using a torsion balance [(BIPM-14)\cite{Quinn14}, (UCI-14)\cite{Newman14}, (HUST-09)\cite{Luo09}], (UZur-06)\cite{Schlamminger06} used a beam balance and (JILA-10)\cite{Parks10} measured the separation of two simple pendulums in a gravitational field. These measurements all tried to quantify the very weak gravitational force with a mechanical apparatus. The sixth measurement, (LENS-14)\cite{Rosi14}, was performed under another approach, using cold atom interferometry. Its uncertainty is a lot larger than the others, but it could become more competitive in the future. However, a brief glance on the plotted measurements shows the disagreement of current $G$-values and suggests a demand for new, potentially different techniques.\\ 
-
-
-\subsection{Description of new measurement}
-Newton's law of gravitation does not only explain why an apple falls down from a tree, it also explains orbits. If one has two bodies of masses $m_1$ and $m_2$, on which the only force acting is their respective gravitational attraction, they will orbit around their common barycenter in an ellipse described by Kepler's laws. The third law, given in Eq.~(\ref{eq:kepler3}), states that the square of the orbital period $P$ is directly proportional to the cube of the semimajor axis $a$. In this proportionality factor, the gravitational constant $G$ appears.
+\subsection{An artificial two-body gravitating system}
+Newton's law of gravitation does not only explain why an apple falls
+down from a tree, it also explains orbits. If one has two bodies of
+masses $m_1$ and $m_2$, on which the only force acting is their
+respective gravitational attraction, they will orbit around the common
+center of mass, with the relative vector tracing an ellipse
+described by Kepler's laws. The third law, relates the
+orbital period $P$ to semimajor axis $a$ of the ellipse, as
 \begin{equation}\label{eq:kepler3}
 P^2 = \frac{4 \, \pi^2}{G(m_1+m_2)}a^3
 \end{equation}
-If one is able to measure the position of the two masses very accurately and thus knows the orbit, it is possible to deduce the gravitational constant. 
-So what we need is a freely falling two-body system. The only way to achieve this over some time, is to go to space. Thus, one has to design a spacecraft involving a cavity that contains the two masses and a position measurement apparatus. The cavity should shield the two-body system from environmental influences. The spacecraft is then put in space, preferably to a Lagrange point of the earth-sun system, in order to prevent large tidal forces.\\
+with the gravitational constant $G$ appearing in the proportionality
+factor.  If one can measure the position of the two masses very
+accurately and thus know the orbit, it is possible to deduce the
+gravitational constant.  So what we need is a freely-falling two-body
+system. The only way to achieve this over some time, is to go into
+space. Thus, one has to design a spacecraft with a cavity that
+contains the two masses and a position measurement apparatus. The
+cavity should shield the two-body system from environmental
+influences. The spacecraft is then put in space, at a location where
+tidal forces are minimal.  The stable Lagrange points of the Earth-Sun
+system (that is, $L_4$ or $L_5$, also known as the Earth-Trojan
+locations) would be suitable.
 
 \begin{figure}
 	\centering
@@ -149,16 +180,31 @@ So what we need is a freely falling two-body system. The only way to achieve thi
 	\label{fig:sketch}
 \end{figure}
 
-To get a feeling what the dimensions of such an experiment could be, choose for example lead balls with a diameter of about 10 cm, their mass then is about 6 kg. If one then chooses a semimajor axis of 15 cm, the orbital period would be roughly 3.5 hours and the gravitational force acting between the two bodies is of order $10^{-8}$ N. In Fig.~\ref{fig:sketch} we show a sketch on how this would look like. Treating this system with Newtonian gravity is justified, because corrections from general relativity would be of order $(v^2/c^2)$ and $(GM/rc^2)$, which for our two-body orbit are both very small numbers.\\
+To get a feeling what the dimensions of such an experiment could be,
+choose for example lead balls with a diameter of about 10~cm, their
+mass then is about 6~kg. If one then chooses a semimajor axis of
+15~cm, the orbital period would be roughly 3.5~hours and the
+gravitational force acting between the two bodies is of order
+$10^{-8}$N.  In Fig.~\ref{fig:sketch} we show a sketch on how this
+would look like. Treating this system with Newtonian gravity is justified, because corrections from general relativity would be of order $(v^2/c^2)$ and $(GM/rc^2)$, which for our two-body orbit are both very small numbers. To follow the mutual orbit of the two balls, best
+would be a laser interferometry system, which can yield precisions
+down to some nanometers.\cite{Loughridge13}
 
-For getting an improvement in the precision of the gravitational constant, the positions of the two balls have to be known very accurately. Best suitable would probably be a laser interferometry system, which can yield precisions down to some nanometers.\cite{Loughridge13}
-The main difference to other techniques is that position measurements can be very accurate compared to directly measuring the gravitational force.
-This new kind of measurement of the gravitational constant appears simple, but it brings various difficulties with it. It is practically impossible to have a clean system, where only the respective gravitational force is acting between the two bodies, so one has to find out what effects could possibly disturb the system and then either make them as small as possible or correct for them. \\
-
+Such a system, if it could be set up, promises two advantages.  One is
+the avoidance of any mechanical contact with the gravitating parts of
+the experiment.  The other advantage lies in the behavior of signal
+and noise.  The signal, which is essentially the distance travelled,
+is proportional to time. The noise, however, would be almost
+time-independent. This suggests that signal-to-noise would be
+proportional to the length of the experiment, until it was limited by
+systematic error. The achievable accuracy would therefore depend
+entirely on how well external perturbations to the gravitational
+two-body problem could be eliminated, or corrected for.  In following,
+we consider the expected perturbations.
 
 \subsection{Disturbing effects}
 
-\textbf{Radiation pressure:} The envelope of the cavity needs to protect the two body-system from the constant bombardment of radiation and charged particles from the sun. Since the activity of the sun varies much, the spacecraft must be able to correct its position around the freely falling masses inside the cavity.\\
+\textbf{Radiation pressure:} The envelope of the cavity needs to protect the two body-system from the constant bombardment of radiation and charged particles from the Sun. Since the activity of the Sun varies much, the spacecraft must be able to correct its position around the freely falling masses inside the cavity.\\
 Furthermore, there is thermal radiation inside the cavity, that could disturb the orbit.
 Using the Stefan-Boltzmann law, we can relate radiation pressure to the temperature inside the cavity. If we then specify to balls of radius $r$, we can express the force on the balls as 
 \begin{equation}
@@ -171,45 +217,45 @@ The photons of the laser that measures the position of the two balls exert an ad
 
 
 \textbf{Coulomb force:}
-Since the electromagnetic force is orders of magnitude stronger than the gravitational force, the balls must be absolutely neutral. A possible source of charges are cosmic rays or the solar wind, so they have to be protected as good as possible. If we want that the Coulomb force between the balls is in the same order as the effect of thermal radiation and thus negligible, the maximal allowed charge on the balls is about $6 \cdot 10^{-14}\,\mathrm{C}$, which corresponds to roughly $4 \cdot 10^5$ elementary charges.\\
+Since the electromagnetic force is orders of magnitude stronger than the gravitational force, the balls must be absolutely neutral. A possible source of charges are cosmic rays or the solar wind, so the two bodies have to be adequately shielded by the enclosing shell.  If we want that the Coulomb force between the balls is in the same order as the effect of thermal radiation and thus negligible, the maximal allowed charge on the balls is about $6 \cdot 10^{-14}\,\mathrm{C}$, which corresponds to roughly $4 \cdot 10^5$ elementary charges.
 
 \textbf{Coriolis effect:}
 \label{sec:coriolis}
-The Coriolis force is a fictitious force which only acts on moving bodies in a rotating reference frame. If we imagine the spacecraft located stationary at a Lagrange point of the earth-sun system, it is situated in a rotating frame around the earth-sun barycenter. Since the balls are moving with respect to this frame, there will be a Coriolis acceleration
+The Coriolis force is a fictitious force which only acts on moving bodies in a rotating reference frame. If we imagine the spacecraft located stationary at a Lagrange point of the Earth-Sun system, it is situated in a rotating frame around the Earth-Sun barycenter. Since the balls are moving with respect to this frame, there will be a Coriolis acceleration
 \begin{equation}
 \label{eq:coriolis}
 \ddot{\vec{r}}_\mathrm{c} = - 2 \; \vec{\omega} \times \dot{\vec{r}}.
 \end{equation}
-In this formula $\vec{\omega}$ is the angular velocity vector of the rotating frame and $\dot{\vec{r}}$ is the velocity vector in the two-body system.\\
+In this formula $\vec{\omega}$ is the angular velocity vector of the rotating frame and $\dot{\vec{r}}$ is the velocity vector in the two-body system.
 
 \textbf{Centrifugal and tidal forces:}
 \label{sec:tidal}
-The free fall condition is not possible to achieve for both masses simultaneously since we are in a non-inertial, rotating frame and therefore have to account for centrifugal forces. The centrifugal acceleration $\ddot{\vec{r}}_{\mathrm{Z}}$ is proportional to the distance vector $\vec{r}$ and scales with $\omega^2$, where $\omega$ is the angular velocity of the sun-earth reference frame:
+The free fall condition is not possible to achieve for both masses simultaneously since we are in a non-inertial, rotating frame and therefore have to account for centrifugal forces. The centrifugal acceleration $\ddot{\vec{r}}_{\mathrm{Z}}$ is proportional to the distance vector $\vec{r}$ and scales with $\omega^2$, where $\omega$ is the angular velocity of the Sun-Earth reference frame:
 \begin{equation}
 \label{eq:centrifugalacc}
 \ddot{\vec{r}}_{\mathrm{Z}} = \vec{\omega} \times \left( \vec{\omega} \times \vec{r} \right) 
 \end{equation}
-On the other hand, there are tidal forces. Imagine if one mass is closer to the sun-earth barycenter, the gravitational force on it is slightly bigger than on the other mass. This results in a correction proportional to the distance too. One can approximate the tidal acceleration as
+In addition, there are tidal forces. If one mass is closer to the Sun, the gravitational force on it is slightly bigger than on the other mass. This results in a force perturbation, which is also proportional to $r$. One can approximate the tidal acceleration as
 \begin{equation}
 \label{eq:tidalacc}
 \ddot{\vec{r}}_{\mathrm{\tau}} \approx \frac{2 \, G \, M_\odot}{R^3} \, \vec{r}.
 \end{equation}
-In this equation $M_\odot$ is the solar mass and $R$ is the radius of the orbit around the sun. With Kepler's third law one can rewrite the tidal acceleration as a function of the orbital period squared of the sun-earth reference frame. Thus it scales the same way as the centrifugal force. To estimate the magnitude of the centrifugal and tidal acceleration relative to the gravitational acceleration between the two balls, we find that their ratio is proportional to the orbital periods squared
+In this equation $M_\odot$ is the solar mass and $R$ is the radius of the orbit around the Sun. With Kepler's third law one can rewrite the tidal acceleration as a function of the orbital period squared of the Sun-Earth reference frame. Thus it scales the same way as the centrifugal force. To estimate the magnitude of the centrifugal and tidal acceleration relative to the gravitational acceleration between the two balls, we find that their ratio is proportional to the orbital periods squared
 \begin{equation}\label{a_ratio}
 \frac{\ddot{r}_{\mathrm{\tau}}}{\ddot{r}_\mathrm{G}} \propto \frac{P^2}{{P_\odot}^2} \approx 10^{-7},
 \end{equation}
-here $P_\odot$ corresponds to one year, whereas $P$ is the orbital period of the two balls. So tidal and centrifugal effects are about $10^{-7}$ times smaller than the respective gravity of the two balls.\\
+where $P_\odot$ corresponds to one year, whereas $P$ is the orbital period of the two balls. So tidal and centrifugal effects are about $10^{-7}$ times smaller than the respective gravity of the two balls.
 
 \textbf{Gravitational field:}
 Much attention has to be paid to the effect of the gravitational field of the spacecraft itself and the measurement apparatus. This certainly can't be neglected, but with a clever design, its effects can be minimized. For example an almost spherically symmetric spacecraft would probably be a good choice. It should also be possible to calculate the gravitational field caused by the components of the spacecraft at the positions of the balls. Then one can correct the equation of motion by adding an extra term that is accounting for the gravitational field. \\
-A source of an additional gravitational field is earth's moon and the other planets in the solar system. Fortunately, for this we don't need to correct if the whole system, consisting of the spacecraft and the two-body system, is moving through space together. Although, the spacecraft should be able to correct its position around the two balls to avoid a collision.\\
+A source of an additional gravitational field is Earth's moon and the other planets in the solar system. Fortunately, for this we don't need to correct if the whole system, consisting of the spacecraft and the two-body system, is moving through space together. Although, the spacecraft should be able to correct its position around the two balls to avoid a collision.\\
 
 
 \section{Extracting $G$ from position measurement data}
 
 In this section we are going to show how the gravitational constant can be recovered from position data of the two balls that the laser interferometry measurement would provide.
 But first we have to find the orbital equation of motion for the two balls.\\
-
+git 
 \subsection{Orbital equation of motion}
 From Newtonian dynamics the equation of motion for a clean two-body system is given by 
 \begin{equation}
@@ -235,7 +281,7 @@ So the full equation of motion for the two balls looks as follows:
 \ddot{\vec{r}} = - \frac{k\,\vec{r}}{r^3} - 2 \; \vec{\omega} \times \dot{\vec{r}} + C \cdot \vec{r}
 \end{equation}
 These are actually three coupled equations of motion, one for each coordinate axis. Since all are second order differential equations, this leaves us with six initial conditions. In other words to determine the orbit, we need to give six starting values.\\
-We choose our coordinate system such that the orbital plane of the two-body system is in the $x-y$ plane. $\vec{\omega}$ is a constant vector that points in the direction of the rotation axis of the earth-sun reference frame. We will fit for $\vec{\omega}$, so we don't have to know it exactly before, but it can be estimated well and thus provides good starting points for the fit. The same is valid for the six components of the matrix $C$.\\
+We choose our coordinate system such that the orbital plane of the two-body system is in the $x-y$ plane. $\vec{\omega}$ is a constant vector that points in the direction of the rotation axis of the Earth-Sun reference frame. We will fit for $\vec{\omega}$, so we don't have to know it exactly before, but it can be estimated well and thus provides good starting points for the fit. The same is valid for the six components of the matrix $C$.\\
 
 Counting all unknown parameters in the equation of motion, we get 16. They correspond to 6 initial conditions, 6 components of the matrix $C$, 3 components of the vector $\vec{\omega}$ and the object of main interest, $k$,  which contains the gravitational constant ($k = GM$). Fitting for so many parameters is not an easy task, but it should be possible because the parameters are not completely unknown.\\
 
@@ -245,11 +291,10 @@ Counting all unknown parameters in the equation of motion, we get 16. They corre
 Our problem has 16 unknown parameters, but the only one we are really interested in is $k$, which contains the gravitational constant. For the fit, we suggest to use a Markov Chain Monte-Carlo (MCMC) method because it does good work even if the parameter space is large. 
 A Markov chain Monte-Carlo method is a Bayesian approach to data analysis. It uses the information provided by observed data about a set of parameters, to update a prior state of beliefs about the set of parameters to become a posterior state of beliefs about a set of parameters. We will not describe in detail how the MCMC is working, rather refer to an online tutorial from ESO PyCoffee\cite{esopycoffee} or an introduction paper from van Ravenzwaaij et al.\cite{vanRavenzwaaij16}
 
-First we have to specify the prior probability distribution, so to say what values for the 16 parameters in the equation of motion actually make sense. Then, for all 16 parameters, a uniform distribution within these ranges and zero probability everywhere else is assumed as the prior probability distribution.
-We briefly explain in what range the values of the parameters are estimated and display it in Table~\ref{tab:parameters}.
-For the parameter $k$, which is the product of the gravitational constant $G$ and the total mass $M$, if we look at the current measured values for the gravitational constant in Fig.~\ref{fig:Gmeasurements}, it is reasonable to constrain its numerical value in SI units to values between $6.671 \cdot 10^{-11}$ and $6.676 \cdot 10^{-11}$. The masses of the two balls will not contribute to a larger uncertainty in $k$, we choose them to be 6 kg.
+We briefly explain in what range the values of the parameters are estimated and display it in table~\ref{tab:parameters}.
+For the parameter $k$, which is the product of the gravitational constant $G$ and the total mass $M$ we look at the current measured values for the gravitational constant in Fig.~\ref{fig:Gmeasurements}, it is reasonable to constrain its numerical value in SI units to values between $6.671 \cdot 10^{-11}$ and $6.676 \cdot 10^{-11}$. The masses of the two balls will not contribute to a larger uncertainty in $k$, we choose them to be 6 kg.
+The vector $\vec{\omega}$ accounts for the rotation of the reference frame. If we say that the orbit of the balls lies in the same plane as the orbital plane of the Earth, $\vec{\omega}$ will point in $z$ - direction with $x$ and $y$ components small. Thus $\omega_z$ is associated with the period $P_\odot$ of one year through $2\pi/P_\odot$. Because the rotation axis are conceivably not exactly aligned, we add some uncertainty. As mentioned before, the $x$ and $y$ components are small, so to say roughly in the range of the uncertainty in $w_z$.
 
-The vector $\vec{\omega}$ accounts for the rotation of the reference frame. If we say that the orbit of the balls lies in the same plane as the orbital plane of the earth, $\vec{\omega}$ will point in $z$ - direction with $x$ and $y$ components small. Thus $\omega_z$ is associated with the period $P_\odot$ of one year through $2\pi/P_\odot$. Because the rotation axis are conceivably not exactly aligned, we add some uncertainty. As mentioned before, the $x$ and $y$ components are small, so to say roughly in the range of the uncertainty in $w_z$.
 The main contribution to the tidal term goes with $\omega^2$ and lies in the orbital plane. We are free to choose the $x$ and $y$ axis, so we choose it such that it is in $x$-direction. The other five components then should be smaller, but we give some extra range to account for possible other perturbations.
 The initial values for the positions can be guessed very accurately, since they are directly measured precisely. The initial velocity can be calculated easily and matched to the initial positions, therefore also yielding narrow parameter ranges.
 
@@ -369,3 +414,13 @@ The Journal of Open Source Software (10), (2016).
 \end{thebibliography}
 
 \end{document}
+
+@INPROCEEDINGS{2016APS..APR.R5001S,
+   author = {{Schlamminger}, S.},
+    title = ``{Measurements of the gravitational constant - why we need new ideas}'',
+booktitle = {APS April Meeting Abstracts},
+     year = 2016,
+    month = mar,
+   adsurl = {http://adsabs.harvard.edu/abs/2016APS..APR.R5001S},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
