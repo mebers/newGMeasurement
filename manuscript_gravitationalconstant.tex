@@ -41,7 +41,7 @@ measuring $G$ three or four orders of magnitude better than currently
 known, so as to find the unknown digits xxxx.  We study a possible
 scenario for doing so with an artificial two-body orbit.  The cleanest
 (admittedly, not the cheapest) option is to place the system on a
-trojan orbit to minimize external gravitational perturbations, and
+Trojan orbit to minimize external gravitational perturbations, and
 enclose it in a cavity chilled to liquid-helium temperatures, to
 suppress radiation pressure.  Data analysis would involve
 marginalizing over at least 15~nuisance parameters (6~for orbital
@@ -206,9 +206,9 @@ we consider the expected perturbations.
 
 \textbf{Radiation pressure:} The envelope of the cavity needs to protect the two body-system from the constant bombardment of radiation and charged particles from the Sun. Since the activity of the Sun varies much, the spacecraft must be able to correct its position around the freely falling masses inside the cavity.\\
 Furthermore, there is thermal radiation inside the cavity, that could disturb the orbit.
-Using the Stefan-Boltzmann law, we can relate radiation pressure to the temperature inside the cavity. If we then specify to balls of radius $r$, we can express the force on the balls as 
+Using the Stefan-Boltzmann law, we can relate radiation pressure to the temperature inside the cavity. If we then specify to balls of diameter $d$, we can express the force on the balls as 
 \begin{equation}
-F = \frac{8 \pi^6 r^2 {k_\mathrm{B}}^4 T^4}{45 c^3 h^3}.
+F = \frac{2 \pi^6 d^2 {k_\mathrm{B}}^4 T^4}{45 c^3 h^3}.
 \end{equation}
 As we can see, this force is highly temperature dependent. In order to minimize this influence, one should deploy a temperature as small as possible in the cavity. In fact, if a cooling system based on liquid helium is installed, temperature can be brought down to about 4 K. Such a low temperature results in a force on the balls in the order of $10^{-16}$ N. Compared to the gravitational force, this is orders of magnitude less and thus we don't have to worry about effects of radiation pressure.\\
 
@@ -253,47 +253,86 @@ A source of an additional gravitational field is Earth's moon and the other plan
 
 \section{Extracting $G$ from position measurement data}
 
-In this section we are going to show how the gravitational constant can be recovered from position data of the two balls that the laser interferometry measurement would provide.
-But first we have to find the orbital equation of motion for the two balls.\\
-git 
+In this section we will show how the gravitational constant can be
+recovered from the position data of the two balls that the laser
+interferometry measurement would provide.  But first we have to find
+the orbital equation of motion for the two balls.
 \subsection{Orbital equation of motion}
 From Newtonian dynamics the equation of motion for a clean two-body system is given by 
 \begin{equation}
 \label{eq:eomeasy}
 \ddot{\vec{r}} = - \frac{G M\, \vec{r}}{r^3}.
 \end{equation}
-Here $M$ denotes the sum of the masses $m_1$ and $m_2$, $G$ is the gravitational constant and $r$ is the relative distance between the two bodies. For simplicity we will abbreviate the product of $GM$ with $k$.
-Since our two-body system is in a rotating frame, we have to add the term developed before for the Coriolis acceleration as well as a correction term proportional to the distance accounting for centrifugal and tidal forces. This last term can be written with a
-symmetric $3 \times 3$ matrix $C$ as follows  
+Here $M$ denotes the sum of the masses $m_1$ and $m_2$, $G$ is the
+gravitational constant and $r$ is the relative distance between the
+two bodies. For simplicity we will abbreviate the product of $GM$ with
+$k$.  Since our two-body system is in a rotating frame, we have to add
+the term developed before for the Coriolis acceleration, as well as a
+correction term for centrifugal and tidal forces. The latter can be
+written with a constant symmetric $3 \times 3$ matrix $C$ as follows
 \begin{equation}
 \label{eq:tidal}
-\ddot{\vec{r}}_{\mathrm{C}} = C \cdot \vec{r}.
+\ddot{\vec{r}}_{\mathrm{C}} = C \cdot \vec{r},
 \end{equation}
 or in terms of the individual components 
 \begin{equation}
 \label{eq:tidacom}
 \left(\ddot{r}_\mathrm{C}\right)_i = \sum_{k=1}^{3} C_{ik} \: r_k.
 \end{equation}
-It can be thought of as a first order expansion and therefore also include other possible minor perturbations. The reference frame is chosen such that the barycenter of the two-body system is force-free.
-So the full equation of motion for the two balls looks as follows:
+The reference frame is chosen such that the barycenter of the two-body
+system is freely falling and has no tidal or fictitious forces acting
+on it.  The balls, however, do experience such forces, because they
+are not at the centre of mass.  The $C$ term can be thought of as a
+first-order expansion of these forces.  So the full equation of motion
+for the two balls looks as follows:
 \begin{equation}
 \label{eq:eom}
 \ddot{\vec{r}} = - \frac{k\,\vec{r}}{r^3} - 2 \; \vec{\omega} \times \dot{\vec{r}} + C \cdot \vec{r}
 \end{equation}
-These are actually three coupled equations of motion, one for each coordinate axis. Since all are second order differential equations, this leaves us with six initial conditions. In other words to determine the orbit, we need to give six starting values.\\
-We choose our coordinate system such that the orbital plane of the two-body system is in the $x-y$ plane. $\vec{\omega}$ is a constant vector that points in the direction of the rotation axis of the Earth-Sun reference frame. We will fit for $\vec{\omega}$, so we don't have to know it exactly before, but it can be estimated well and thus provides good starting points for the fit. The same is valid for the six components of the matrix $C$.\\
+These are actually three coupled equations of motion, one for each coordinate axis. Since all are second order differential equations, this leaves us with six initial conditions. In other words to determine the orbit, we need to give six starting values.
 
-Counting all unknown parameters in the equation of motion, we get 16. They correspond to 6 initial conditions, 6 components of the matrix $C$, 3 components of the vector $\vec{\omega}$ and the object of main interest, $k$,  which contains the gravitational constant ($k = GM$). Fitting for so many parameters is not an easy task, but it should be possible because the parameters are not completely unknown.\\
+We choose our coordinate system such that the orbital plane of the two-body system is in the $x-y$ plane. $\vec{\omega}$ is a constant vector that points in the direction of the rotation axis of the Earth-Sun reference frame. We will fit for $\vec{\omega}$, so we don't have to know it exactly before, but it can be estimated well and thus provides good starting points for the fit. The same is valid for the six components of the matrix $C$.
+
+Counting all unknown parameters in the equation of motion, we get
+16. They correspond to 6 initial conditions, 6 components of the
+matrix $C$, 3 components of the vector $\vec{\omega}$ and the object
+of main interest, $k$, which contains the gravitational constant ($k =
+GM$). Fitting for so many parameters is not an easy task, but it
+should be possible because the parameters are approximately known in
+advance.
 
 
 \subsection{Markov Chain Monte-Carlo fit}
 
-Our problem has 16 unknown parameters, but the only one we are really interested in is $k$, which contains the gravitational constant. For the fit, we suggest to use a Markov Chain Monte-Carlo (MCMC) method because it does good work even if the parameter space is large. 
-A Markov chain Monte-Carlo method is a Bayesian approach to data analysis. It uses the information provided by observed data about a set of parameters, to update a prior state of beliefs about the set of parameters to become a posterior state of beliefs about a set of parameters. We will not describe in detail how the MCMC is working, rather refer to an online tutorial from ESO PyCoffee\cite{esopycoffee} or an introduction paper from van Ravenzwaaij et al.\cite{vanRavenzwaaij16}
+To fit for $k$ and the 15 accompanying nuisance parameters, we suggest
+using a Markov Chain Monte-Carlo (MCMC) method, which are widely used
+for similarly large parameter spaces.  MCMC is a Bayesian approach,
+which uses the information provided by observed data about a set of
+parameters, to update a prior state of knowledge/ignorance about the
+set of parameters to become a posterior state of knowledge/ignorance
+about a set of parameters. We will not describe in detail how MCMC
+works, but refer the reader to an online tutorial from ESO
+PyCoffee\cite{esopycoffee} or an introduction paper from van
+Ravenzwaaij et al.\cite{vanRavenzwaaij16}
 
-We briefly explain in what range the values of the parameters are estimated and display it in table~\ref{tab:parameters}.
-For the parameter $k$, which is the product of the gravitational constant $G$ and the total mass $M$ we look at the current measured values for the gravitational constant in Fig.~\ref{fig:Gmeasurements}, it is reasonable to constrain its numerical value in SI units to values between $6.671 \cdot 10^{-11}$ and $6.676 \cdot 10^{-11}$. The masses of the two balls will not contribute to a larger uncertainty in $k$, we choose them to be 6 kg.
-The vector $\vec{\omega}$ accounts for the rotation of the reference frame. If we say that the orbit of the balls lies in the same plane as the orbital plane of the Earth, $\vec{\omega}$ will point in $z$ - direction with $x$ and $y$ components small. Thus $\omega_z$ is associated with the period $P_\odot$ of one year through $2\pi/P_\odot$. Because the rotation axis are conceivably not exactly aligned, we add some uncertainty. As mentioned before, the $x$ and $y$ components are small, so to say roughly in the range of the uncertainty in $w_z$.
+We now briefly explain in what range the values of the parameters are
+estimated.  Numbers are given in Table~\ref{tab:parameters}.  For the
+parameter $k$, which is the product of the gravitational constant $G$
+and the total mass $M$ we look at the current measured values for the
+gravitational constant in Fig.~\ref{fig:Gmeasurements}, it is
+reasonable to constrain its numerical value in SI units to values
+between $6.671 \cdot 10^{-11}$ and $6.676 \cdot 10^{-11}$. The masses
+of the two balls will not contribute to a larger uncertainty in $k$,
+we choose them to be 6~kg.  The vector $\vec{\omega}$ accounts for the
+rotation of the reference frame. If we say that the orbit of the balls
+lies in the same plane as the orbital plane of the Earth,
+$\vec{\omega}$ will point in $z$-direction with $x$ and $y$
+components small. Thus $\omega_z$ is associated with the period
+$P_\odot$ of one year through $2\pi/P_\odot$. Because the rotation
+axis are conceivably not exactly aligned, we add some uncertainty. As
+mentioned before, the $x$ and $y$ components are small, that is to
+say, near zero in roughly in the range of the uncertainty in
+$\omega_z$.
 
 The main contribution to the tidal term goes with $\omega^2$ and lies in the orbital plane. We are free to choose the $x$ and $y$ axis, so we choose it such that it is in $x$-direction. The other five components then should be smaller, but we give some extra range to account for possible other perturbations.
 The initial values for the positions can be guessed very accurately, since they are directly measured precisely. The initial velocity can be calculated easily and matched to the initial positions, therefore also yielding narrow parameter ranges.
@@ -330,8 +369,23 @@ The initial values for the positions can be guessed very accurately, since they 
 	\label{tab:parameters}
 \end{table}
 
-In the next step, we set the parameters to a fixed ``true" value within the range estimated. We have to keep in mind that $k$, $x_0$ and $v_{y_0}$ are linked together and there must not be contradictions in the true values. The chosen values are displayed in the right column in Table~\ref{tab:parameters}.
-To simulate data we would obtain from the position measurements, we integrate the equations of motion. The time for one orbit without perturbations can be estimated using Kepler's third law (\ref{eq:kepler3}). For the value of $k$ assumed above and a semi-major axis of $0.15 \, \mathrm{m}$, this results in an orbital period of roughly $12900 \, \mathrm{seconds}$ or $3.5 \, \mathrm{hours}$. Here we integrate two orbits in $100000$ steps, that would correspond to about $4$ measurements per second, which should be feasible. To the generated data, we add normal distributed noise with a standard deviation of $10 \, \mathrm{nm}$. This uncertainty stays for a systematic error in the laser interferometry measurement and also random statistic noise. Its value is just an estimation, it would depend highly on the measurement system that has been used.
+In the next step, we set the parameters to a fixed ``true" value
+within the range estimated. We have to keep in mind that $k$, $x_0$
+and $v_{y_0}$ are linked together and there must not be contradictions
+in the true values. The chosen values are displayed in the right
+column in Table~\ref{tab:parameters}.  To simulate data we would
+obtain from the position measurements, we integrate the equations of
+motion. The time for one orbit without perturbations can be estimated
+using Kepler's third law (\ref{eq:kepler3}). For the value of $k$
+assumed above and a semi-major axis of $0.15 \, \mathrm{m}$, this
+results in an orbital period of roughly $12900 \, \mathrm{seconds}$ or
+$3.5 \, \mathrm{hours}$. Here we integrate two orbits in $100000$
+steps, that would correspond to about $4$ measurements per second,
+which should be feasible. To the generated data, we add Gaussian noise
+with a standard deviation of $10 \, \mathrm{nm}$. This uncertainty
+stays for a systematic error in the laser interferometry measurement
+and also random statistic noise. The value we use is just an estimate,
+it would depend strongly on the measurement system that has been used.
 
 \begin{figure}[h]
 	\centering
@@ -340,7 +394,7 @@ To simulate data we would obtain from the position measurements, we integrate th
 	\label{fig:plotCorner4}
 \end{figure}
 
-A useful way to look at the samples of the posterior returned by the MCMC is doing a corner plot using a Python module named \textit{corner}\cite{corner}. The corner plot shows all the one and two dimensional projections of the posterior probability distributions and demonstrates quickly the covariances between parameters. Along the diagonal, the marginalized distribution for each parameter independently is shown.
+A useful way to look at the samples of the posterior returned by the MCMC is to make a corner plot using a Python module named \textit{corner}.\cite{corner} The corner plot shows all the one- and two-dimensional projections of the posterior probability distributions and demonstrates quickly the covariances between parameters. Along the diagonal, the marginalized distribution for each parameter independently is shown.
 In Fig.~\ref{fig:plotCorner4} an excerpt of the full corner plot is shown. 
 
 To arrive at a best value with uncertainty for the gravitational constant, we take the mean and standard deviation of the marginalized distribution of the parameter $k$ and divide by the total mass of the balls. In this example the relative uncertainty of $k$ is roughly $10^{-7}$, so if the masses are measured to about the same precision, we can write for the gravitational constant $G$:
@@ -350,27 +404,17 @@ G = \left(6.674005 \pm 0.000001 \right) \cdot 10^{-11}  \frac{\mathrm{m}^3}{\mat
 This corresponds to a relative uncertainty of $1.5 \cdot 10^{-7}$ or 15 parts in a hundred million.
 
 \section{Conclusion}
-We have proposed a new way to measure the gravitational constant $G$ and estimated on what order of magnitude different disturbing effects occur and if one has to correct for them. We then simulated measurement data and showed how to extract the gravitational constant. Based on our estimations, it should be possible to measure the gravitational constant to about $10^{-7}$ relative uncertainty. This is a about a factor of 300 better than today's recommended CODATA value.
-
-If we are a bit optimistic, a further increase in precision is not out of reach, so that about the same relative uncertainty as for Planck's constant $h$ ($1.2 \cdot 10^{-8}$)\cite{CODATA16} could be achieved. This then would allow to redefine the kilogram as an integer multiple of the Planck mass.\\
-
-
-
-
-
-\appendix*   % Omit the * if there's more than one appendix.
-
-\section{Uninteresting stuff}
-
-%Appendices are for material that is needed for completeness but
-%not sufficiently interesting to include in the main body of the paper.  Most
-%articles don't need any appendices, but feel free to use them when
-%appropriate.  This sample article needs an appendix only to illustrate how 
-%to create an appendix.
-
-
-
-
+We have outlined an orbit experiment to measure the gravitational
+constant $G$, and estimated the level of various disturbing effects
+and how to correct for them.  Simulating the measurement process and
+extraction of the gravitational constant indicates that $G$ could be
+estimated to about $10^{-7}$ relative uncertainty.  This is a about a
+factor of 300 better than today's recommended CODATA value.  If we are
+a bit optimistic, a further increase in precision is not out of reach,
+so that about the same relative uncertainty as for Planck's constant
+$h$ ($1.2 \cdot 10^{-8}$)\cite{CODATA16} could be achieved. This then
+would allow a future redefination of the kilogram as an integer
+multiple of the Planck mass.
 
 \begin{thebibliography}{99}
 
