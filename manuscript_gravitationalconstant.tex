@@ -129,7 +129,7 @@ stringent still.
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{img/plotGmeas}
-	\caption{Six of the most recent measurements of the gravitational constant $G$ with their uncertainties are plotted. The large disagreement is recognised immediately. The green lines represents the current recommended CODATA value and its uncertainty.}
+	\caption{Six of the most recent measurements of the gravitational constant $G$ with their uncertainties are plotted. The large disagreement is recognised immediately. The green lines represent the current recommended CODATA value and its uncertainty.\cite{CODATA16}}
 	\label{fig:Gmeasurements}
 \end{figure}
 
@@ -162,7 +162,7 @@ P^2 = \frac{4 \, \pi^2}{G(m_1+m_2)}a^3
 \end{equation}
 with the gravitational constant $G$ appearing in the proportionality
 factor.  If one can measure the position of the two masses very
-accurately and thus know the orbit, it is possible to deduce the
+accurately and thus the orbit is known, it is possible to deduce the
 gravitational constant.  So what we need is a freely-falling two-body
 system. The only way to achieve this over some time, is to go into
 space. Thus, one has to design a spacecraft with a cavity that
@@ -185,8 +185,8 @@ choose for example lead balls with a diameter of about 10~cm, their
 mass then is about 6~kg. If one then chooses a semimajor axis of
 15~cm, the orbital period would be roughly 3.5~hours and the
 gravitational force acting between the two bodies is of order
-$10^{-8}$N.  In Fig.~\ref{fig:sketch} we show a sketch on how this
-would look like. Treating this system with Newtonian gravity is justified, because corrections from general relativity would be of order $(v^2/c^2)$ and $(GM/rc^2)$, which for our two-body orbit are both very small numbers. To follow the mutual orbit of the two balls, best
+$10^{-8}$~N.  In Fig.~\ref{fig:sketch} we show a sketch on how this
+would look like. Treating this system with Newtonian gravity is justified, because corrections from general relativity would be of order $(v^2/c^2)$ and $(GM/rc^2)$, which for our two-body system are both very small numbers. To follow the mutual orbit of the two balls, best
 would be a laser interferometry system, which can yield precisions
 down to some nanometers.\cite{Loughridge13}
 
@@ -210,11 +210,10 @@ Using the Stefan-Boltzmann law, we can relate radiation pressure to the temperat
 \begin{equation}
 F = \frac{8 \pi^6 r^2 {k_\mathrm{B}}^4 T^4}{45 c^3 h^3}.
 \end{equation}
-As we can see, this force is highly temperature dependent. In order to minimize this influence, one should deploy a temperature as small as possible in the cavity. In fact, if a cooling system based on liquid helium is installed, temperature can be brought down to about 4 K. Such a low temperature results in a force on the balls in the order of $10^{-16}$ N. Compared to the gravitational force, this is orders of magnitude less and thus we don't have to worry about effects of radiation pressure.\\
+As we can see, this force is highly temperature dependent. In order to minimize this influence, one should deploy a temperature as small as possible in the cavity. In fact, if a cooling system based on liquid helium is installed, temperature can be brought down to about 4 K. Such a low temperature results in a force on the balls in the order of $10^{-16}$ N. Compared to the gravitational force, this is orders of magnitude less and thus we don't have to worry about effects of radiation pressure.
 
 \textbf{Influence of the position measurement:} 
-The photons of the laser that measures the position of the two balls exert an additional force. If a laser with a power of 1 mW is used and not more than five measurements every second are performed, the force on the balls is in the same order as the influence of thermal radiation and thus negligible too.\\
-
+The photons of the laser that measures the position of the two balls exert an additional force. If a laser with a power of 1 mW is used and not more than five measurements every second are performed, the force on the balls is in the same order as the influence of thermal radiation and thus negligible too.
 
 \textbf{Coulomb force:}
 Since the electromagnetic force is orders of magnitude stronger than the gravitational force, the balls must be absolutely neutral. A possible source of charges are cosmic rays or the solar wind, so the two bodies have to be adequately shielded by the enclosing shell.  If we want that the Coulomb force between the balls is in the same order as the effect of thermal radiation and thus negligible, the maximal allowed charge on the balls is about $6 \cdot 10^{-14}\,\mathrm{C}$, which corresponds to roughly $4 \cdot 10^5$ elementary charges.
@@ -226,7 +225,7 @@ The Coriolis force is a fictitious force which only acts on moving bodies in a r
 \label{eq:coriolis}
 \ddot{\vec{r}}_\mathrm{c} = - 2 \; \vec{\omega} \times \dot{\vec{r}}.
 \end{equation}
-In this formula $\vec{\omega}$ is the angular velocity vector of the rotating frame and $\dot{\vec{r}}$ is the velocity vector in the two-body system.
+In this formula, $\vec{\omega}$ is the angular velocity vector of the rotating frame and $\dot{\vec{r}}$ is the velocity vector in the two-body system.
 
 \textbf{Centrifugal and tidal forces:}
 \label{sec:tidal}
@@ -248,14 +247,14 @@ where $P_\odot$ corresponds to one year, whereas $P$ is the orbital period of th
 
 \textbf{Gravitational field:}
 Much attention has to be paid to the effect of the gravitational field of the spacecraft itself and the measurement apparatus. This certainly can't be neglected, but with a clever design, its effects can be minimized. For example an almost spherically symmetric spacecraft would probably be a good choice. It should also be possible to calculate the gravitational field caused by the components of the spacecraft at the positions of the balls. Then one can correct the equation of motion by adding an extra term that is accounting for the gravitational field. \\
-A source of an additional gravitational field is Earth's moon and the other planets in the solar system. Fortunately, for this we don't need to correct if the whole system, consisting of the spacecraft and the two-body system, is moving through space together. Although, the spacecraft should be able to correct its position around the two balls to avoid a collision.\\
+A source of an additional gravitational field is Earth's moon and the other planets in the solar system. Fortunately, for this we don't need to correct if the whole system, consisting of the spacecraft and the two-body system, is moving through space together. Although, the spacecraft should be able to correct its position around the two balls to avoid a collision.
 
 
 \section{Extracting $G$ from position measurement data}
 
 In this section we are going to show how the gravitational constant can be recovered from position data of the two balls that the laser interferometry measurement would provide.
-But first we have to find the orbital equation of motion for the two balls.\\
-git 
+But first we have to find the orbital equation of motion for the two balls.
+
 \subsection{Orbital equation of motion}
 From Newtonian dynamics the equation of motion for a clean two-body system is given by 
 \begin{equation}
@@ -267,7 +266,7 @@ Since our two-body system is in a rotating frame, we have to add the term develo
 symmetric $3 \times 3$ matrix $C$ as follows  
 \begin{equation}
 \label{eq:tidal}
-\ddot{\vec{r}}_{\mathrm{C}} = C \cdot \vec{r}.
+\ddot{\vec{r}}_{\mathrm{C}} = C \cdot \vec{r}
 \end{equation}
 or in terms of the individual components 
 \begin{equation}
@@ -280,22 +279,22 @@ So the full equation of motion for the two balls looks as follows:
 \label{eq:eom}
 \ddot{\vec{r}} = - \frac{k\,\vec{r}}{r^3} - 2 \; \vec{\omega} \times \dot{\vec{r}} + C \cdot \vec{r}
 \end{equation}
-These are actually three coupled equations of motion, one for each coordinate axis. Since all are second order differential equations, this leaves us with six initial conditions. In other words to determine the orbit, we need to give six starting values.\\
-We choose our coordinate system such that the orbital plane of the two-body system is in the $x-y$ plane. $\vec{\omega}$ is a constant vector that points in the direction of the rotation axis of the Earth-Sun reference frame. We will fit for $\vec{\omega}$, so we don't have to know it exactly before, but it can be estimated well and thus provides good starting points for the fit. The same is valid for the six components of the matrix $C$.\\
+These are actually three coupled equations of motion, one for each spatial coordinate. Since all are second order differential equations, we need to give six initial conditions to determine the orbit.\\
+We choose our coordinate system such that the orbital plane of the two-body system is in the $x-y$ plane. $\vec{\omega}$ is a constant vector that points in the direction of the rotation axis of the Earth-Sun reference frame. We will fit for $\vec{\omega}$, so we don't have to know it exactly before, but it can be estimated well and thus provides good starting points for the fit. The same is valid for the six components of the matrix $C$.
 
 Counting all unknown parameters in the equation of motion, we get 16. They correspond to 6 initial conditions, 6 components of the matrix $C$, 3 components of the vector $\vec{\omega}$ and the object of main interest, $k$,  which contains the gravitational constant ($k = GM$). Fitting for so many parameters is not an easy task, but it should be possible because the parameters are not completely unknown.\\
 
 
 \subsection{Markov Chain Monte-Carlo fit}
 
-Our problem has 16 unknown parameters, but the only one we are really interested in is $k$, which contains the gravitational constant. For the fit, we suggest to use a Markov Chain Monte-Carlo (MCMC) method because it does good work even if the parameter space is large. 
+Our problem has 16 unknown parameters, but the only one we are really interested in is $k$, which contains the gravitational constant. For the fit, we suggest to use a Markov Chain Monte-Carlo (MCMC) method, because it does good work even if the parameter space is large. 
 A Markov chain Monte-Carlo method is a Bayesian approach to data analysis. It uses the information provided by observed data about a set of parameters, to update a prior state of beliefs about the set of parameters to become a posterior state of beliefs about a set of parameters. We will not describe in detail how the MCMC is working, rather refer to an online tutorial from ESO PyCoffee\cite{esopycoffee} or an introduction paper from van Ravenzwaaij et al.\cite{vanRavenzwaaij16}
 
 We briefly explain in what range the values of the parameters are estimated and display it in table~\ref{tab:parameters}.
-For the parameter $k$, which is the product of the gravitational constant $G$ and the total mass $M$ we look at the current measured values for the gravitational constant in Fig.~\ref{fig:Gmeasurements}, it is reasonable to constrain its numerical value in SI units to values between $6.671 \cdot 10^{-11}$ and $6.676 \cdot 10^{-11}$. The masses of the two balls will not contribute to a larger uncertainty in $k$, we choose them to be 6 kg.
-The vector $\vec{\omega}$ accounts for the rotation of the reference frame. If we say that the orbit of the balls lies in the same plane as the orbital plane of the Earth, $\vec{\omega}$ will point in $z$ - direction with $x$ and $y$ components small. Thus $\omega_z$ is associated with the period $P_\odot$ of one year through $2\pi/P_\odot$. Because the rotation axis are conceivably not exactly aligned, we add some uncertainty. As mentioned before, the $x$ and $y$ components are small, so to say roughly in the range of the uncertainty in $w_z$.
+For the parameter $k$, which is the product of the gravitational constant $G$ and the total mass $M$, if we look at the current measured values for the gravitational constant in Fig.~\ref{fig:Gmeasurements}, it is reasonable to constrain its numerical value in SI units to values between $6.671 \cdot 10^{-11}$ and $6.676 \cdot 10^{-11}$. The masses of the two balls will not contribute to a larger uncertainty in $k$, we choose them to be 6 kg.
+The vector $\vec{\omega}$ accounts for the rotation of the reference frame. If we say that the orbit of the balls lies in the same plane as the orbital plane of the Earth, $\vec{\omega}$ will point in $z$ - direction with $x$ and $y$ components small. Thus $\omega_z$ is associated with the period $P_\odot$ of one year through $2\pi/P_\odot$. Because the rotation axis are conceivably not exactly aligned, we add some uncertainty. As mentioned before, the $x$ and $y$ components are small, so to say roughly in the range of the uncertainty in $\omega_z$.
 
-The main contribution to the tidal term goes with $\omega^2$ and lies in the orbital plane. We are free to choose the $x$ and $y$ axis, so we choose it such that it is in $x$-direction. The other five components then should be smaller, but we give some extra range to account for possible other perturbations.
+The main contribution to the tidal term goes with $\omega^2$ and lies in the orbital plane. We are free to choose the $x$ and $y$ axis, so we choose it such that the $\omega^2$-contribution is in $x$-direction. The other five components then should be smaller, but we give some extra range to account for possible other perturbations.
 The initial values for the positions can be guessed very accurately, since they are directly measured precisely. The initial velocity can be calculated easily and matched to the initial positions, therefore also yielding narrow parameter ranges.
 
 \begin{table}[h]
@@ -331,7 +330,7 @@ The initial values for the positions can be guessed very accurately, since they 
 \end{table}
 
 In the next step, we set the parameters to a fixed ``true" value within the range estimated. We have to keep in mind that $k$, $x_0$ and $v_{y_0}$ are linked together and there must not be contradictions in the true values. The chosen values are displayed in the right column in Table~\ref{tab:parameters}.
-To simulate data we would obtain from the position measurements, we integrate the equations of motion. The time for one orbit without perturbations can be estimated using Kepler's third law (\ref{eq:kepler3}). For the value of $k$ assumed above and a semi-major axis of $0.15 \, \mathrm{m}$, this results in an orbital period of roughly $12900 \, \mathrm{seconds}$ or $3.5 \, \mathrm{hours}$. Here we integrate two orbits in $100000$ steps, that would correspond to about $4$ measurements per second, which should be feasible. To the generated data, we add normal distributed noise with a standard deviation of $10 \, \mathrm{nm}$. This uncertainty stays for a systematic error in the laser interferometry measurement and also random statistic noise. Its value is just an estimation, it would depend highly on the measurement system that has been used.
+To simulate data we would obtain from the position measurements, we integrate the equations of motion. The time for one orbit without perturbations can be estimated using Kepler's third law (\ref{eq:kepler3}). For the value of $k$ assumed above and a semi-major axis of $0.15$~m, this results in an orbital period of roughly $12900$ seconds or $3.5$ hours. Here we integrate two orbits in $100000$ steps, that would correspond to about $4$ measurements per second, which should be feasible. To the generated data, we add normal distributed noise with a standard deviation of $10$~nm. This uncertainty stays for a systematic error in the laser interferometry measurement and also random statistic noise. Its value is just an estimation, it would depend highly on the measurement system that has been used.
 
 \begin{figure}[h]
 	\centering
