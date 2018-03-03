@@ -1,74 +1,78 @@
-\documentclass[prb,preprint]{revtex4-1} 
-% The line above defines the type of LaTeX document.
-% Note that AJP uses the same style as Phys. Rev. B (prb).
-
-% The % character begins a comment, which continues to the end of the line.
-
-\usepackage{amsmath}  % needed for \tfrac, \bmatrix, etc.
-\usepackage{amsfonts} % needed for bold Greek, Fraktur, and blackboard bold
-\usepackage{graphicx} % needed for figures
-\usepackage{epstopdf}
+%\documentclass[referee]{aa} % for a referee version
+\documentclass[onecolumn]{aa} % for a paper on 1 column  
+%\documentclass[longauth]{aa} % for the long lists of affiliations 
+%\documentclass[letter]{aa} % for the letters 
+%\documentclass[bibyear]{aa} % if the references are not structured 
+%                              according to the author-year natbib style
+%\documentclass{aa}  
 
 
-\begin{document}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{txfonts}
 
-% Be sure to use the \title, \author, \affiliation, and \abstract macros
-% to format your title page.  Don't use lower-level macros to  manually
-% adjust the fonts and centering.
+\begin{document} 
 
-\title{A scenario for a Planckian standard kilogram}
-% In a long title you can use \\ to force a line break at a certain location.
 
-\author{Michael Ebersold}
-\email{michael.ebersold@uzh.ch} 
-% If there were a second author at the same address, we would put another 
-% \author{} statement here.  Don't combine multiple authors in a single
-% \author statement.
-\author{Prasenjit Saha}
-\email{psaha@physik.uzh.ch}
-% Please provide a full mailing address here.
-\affiliation{Physik-Institut, University of Zurich, Winterthurerstrasse 190, 8057 Zurich, Switzerland}
+\title{Towards a Planckian standard kilogram}
+\subtitle{}
 
-% See the REVTeX documentation for more examples of author and affiliation lists.
+\author{Michael Ebersold\thanks{michael.ebersold@uzh.ch}%\inst{1}
+        \and
+        Prasenjit Saha%\inst{2}\fnmsep
+       }
 
-\date{\today}
+\institute{Physik-Institut, University of Zurich, Winterthurerstrasse
+  190, 8057 Zurich, Switzerland}
 
-\begin{abstract}
-As the kilogram assumes its new definition in terms of $h,c,$ and the
-standard second, it is interesting to think about a possible future
-definition entirely in terms of fundamental constants.  A kilogram
-defined as an integer multiple of the Planck mass (or
-4594xxxx$\times\sqrt{\hbar c/G}$) would cause no significant change
-from its current value.  The practical hurdle to this Planckian
-kilogram is measuring $G$ three or four orders of magnitude better
-than currently known, so as to find the unknown digits xxxx.  We study
-a possible scenario for doing so with an artificial two-body orbit.
-The cleanest (admittedly, not the cheapest) option is to place the
-system on a Trojan orbit to minimize external gravitational
-perturbations, and enclose it in a cavity chilled to liquid-helium
-temperatures, to suppress radiation pressure.  Data analysis would
-involve marginalizing over at least 15~nuisance parameters (6~for
-orbital parameters and 9~for fictitious forces) but that, we show, is
-feasible.
-\end{abstract}
+\date{}
+
+\abstract
+% context heading (optional)
+% {} leave it empty if necessary  
+{As the kilogram assumes its new definition in terms of $h,c,$ and the
+  standard second, it is interesting to think about a possible future
+  definition entirely in terms of fundamental constants.  A kilogram
+  defined as an integer multiple of the Planck mass (or
+  4594xxxx$\times\sqrt{\hbar c/G}$) would cause no significant change
+  from its current value.}
+% aims heading (mandatory)
+{The practical hurdle to this Planckian kilogram is measuring $G$
+  three or four orders of magnitude better than currently known, so as
+  to find the unknown digits xxxx.  We study a possible scenario for
+  doing so with an artificial two-body orbit.}
+% methods heading (mandatory)
+{The cleanest (admittedly, not the cheapest) option is to place the
+  system on a Trojan orbit to minimize external gravitational
+  perturbations, and enclose it in a cavity chilled to liquid-helium
+  temperatures, to suppress radiation pressure.}
+% results heading (mandatory)
+{Data analysis would involve marginalizing over at least 15~nuisance
+  parameters (6~for orbital parameters and 9~for fictitious forces)
+  but that, we show, is feasible.}
+% conclusions heading (optional), leave it empty if necessary 
+{}
+
+\keywords{}
 
 \maketitle
 
 \section{Introduction}
 
 The reform of SI units to use quantum standards is an ongoing ``news
-story'' in physics.\cite{BIPM16}  At the heart of the reform are two quantum
-phenomena that appear on macroscopic scales: the Josephson effect
-makes $h/e$ measurable as a voltage-to-frequency ratio, while the
-quantum Hall effect makes $h/e^2$ a standard resistance (the
-von~Klitzing constant).  These enable electrical units to be defined
-in terms of $h$ and $e$.  A further ingenious instrument, known as a
-watt balance, precisely compares electrical and mechanical power, thus
-enabled mass to be standardized in terms of $h$.  For a simple
-introduction to the new SI, we refer the reader to the article on the
-``LEGO watt balance''.\cite{Chao15}
-The proposed redefinition of the kilogram is an explicit value for
-$h$ and $c$, but we can think of it as
+story'' in physics.\footnote{International Bureau of Weights and
+  Measures, ``DRAFT 9th edition of the SI Brochure", BIPM.}  At the
+heart of the reform are two quantum phenomena that appear on
+macroscopic scales: the Josephson effect makes $h/e$ measurable as a
+voltage-to-frequency ratio, while the quantum Hall effect makes
+$h/e^2$ a standard resistance (the von~Klitzing constant).  These
+enable electrical units to be defined in terms of $h$ and $e$.  A
+further ingenious instrument, known as a watt balance, precisely
+compares electrical and mechanical power, thus enabled mass to be
+standardized in terms of $h$.  For a simple introduction to the new
+SI, we refer the reader to the article on the ``LEGO watt
+balance''.\citep{Chao15} The proposed redefinition of the kilogram is
+an explicit value for $h$ and $c$, but we can think of it as
 \begin{equation}
 \mathrm{kg} \equiv 1.3563925\ldots \times 10^{50} \, \mathrm{s}^{-1}
                    \times \frac{h}{c^2}
@@ -113,7 +117,8 @@ scales, not probed by any known physical process, and presumably the
 regime of quantum gravity.  But extreme scales do not harm if they are
 only part of some expression, as they are here.  The Planck mass is
 small but microscopically measurable: $\sim20\mu\mathrm{g}$.  This is
-of the same order as the uncertainty in the prototype kilogram itself.\cite{BIPM}
+of the same order as the uncertainty in the prototype kilogram
+itself.\footnote{\url{<https://www.bipm.org/utils/common/pdf/cms_m.pdf>}}
 Hence the kilogram could be redefined as an integer multiple of the
 Planck mass, without significantly perturbing its value.
 
@@ -318,7 +323,8 @@ parameters, to update a prior state of knowledge/ignorance about the
 set of parameters to become a posterior state of knowledge/ignorance
 about a set of parameters. We will not describe in detail how MCMC
 works, but refer the reader to an online tutorial from ESO
-PyCoffee\cite{esopycoffee} or an introduction paper from van
+PyCoffee\footnote{\url{<http://eso-python.github.io/ESOPythonTutorials/ESOPythonDemoDay8_MCMC_with_emcee.html>}}
+or an introduction paper from van
 Ravenzwaaij et al.\cite{vanRavenzwaaij16}
 
 We now briefly explain in what range the values of the parameters are
@@ -344,10 +350,10 @@ $\omega_z$.
 The main contribution to the tidal term goes with $\omega^2$ and lies in the orbital plane. We are free to choose the $x$ and $y$ axis, so we choose it such that the $\omega^2$-contribution is in $x$-direction. The other five components then should be smaller, but we give some extra range to account for possible other perturbations.
 The initial values for the positions can be guessed very accurately, since they are directly measured precisely. The initial velocity can be calculated easily and matched to the initial positions, therefore also yielding narrow parameter ranges.
 
-\begin{table}[h]
+\begin{table}%[ht]
 	\centering
 	\caption{This table shows the ranges in which the parameters numerical values in SI units are estimated to make sense and the value which was chosen to generate data.}
-	\begin{ruledtabular}
+%	\begin{ruledtabular}
 		\begin{tabular}{l c c}
 			% The codes above determine the horizontal alignment in each column.
 			% Options are l (left), r (right), c (centered), and p (paragraph).
@@ -372,7 +378,7 @@ The initial values for the positions can be guessed very accurately, since they 
 			$v_{y_0}$ & ($7.30$--$7.31) \cdot 10^{-7}$ & $7.30698296 \cdot 10^{-5}$ \\
 			$v_{z_0}$ & $\pm 10^{-7}$ & $0.0$ \\
 		\end{tabular}
-	\end{ruledtabular}
+%	\end{ruledtabular}
 	\label{tab:parameters}
 \end{table}
 
@@ -392,7 +398,7 @@ which should be feasible. To the generated data, we add Gaussian noise
 with a standard deviation of 10~nm. The value we use is just an estimate,
 it would depend strongly on the measurement system that has been used.
 
-\begin{figure}[h]
+\begin{figure}%[ht]
 	\centering
 	\includegraphics[width=1.0\textwidth]{img/4cornerfit.png}
 	\caption{Corner plot of the posterior for 4 parameters: $x_0$, $v_{y_0}$, $\omega_z$ and $k$. Indicated with blue lines are the values we calculated the data from. The dashed lines in the histograms along the diagonal represent the median and the 0.16 and 0.84 percentiles respectively.}
@@ -435,9 +441,8 @@ chosen so as to avoid chaotic orbits.  Whether a sufficiently detailed
 model for the tidal acceleration could be constructed and fitted to
 the two-body orbital data is an open question.
 
-\begin{thebibliography}{99}
+\bibliographystyle{aa}
 \bibliography{ms.bib}
-\end{thebibliography}
 
 \end{document}
 
