@@ -1,46 +1,61 @@
-\documentclass[]{rsos}
+%\documentclass[referee]{aa} % for a referee version
+\documentclass[onecolumn]{aa} % for a paper on 1 column  
+%\documentclass[longauth]{aa} % for the long lists of affiliations 
+%\documentclass[letter]{aa} % for the letters 
+%\documentclass[bibyear]{aa} % if the references are not structured 
+%                              according to the author-year natbib style
+%\documentclass{aa}  
+
 
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{txfonts}
 
-\begin{document}
+\begin{document} 
 
-\title{Towards a Planckian standard kilogram:
-a scenario for measuring $G$ using an artificial two-body orbit}
 
-\author{Michael Ebersold and Prasenjit Saha}
+\title{Towards a Planckian standard kilogram}
+\subtitle{A scenario for measuring $G$ using an artificial two-body orbit}
 
-\address{Physik-Institut, University of Zurich, Winterthurerstrasse
+\author{Michael Ebersold\thanks{michael.ebersold@uzh.ch}%\inst{1}
+        \and
+        Prasenjit Saha%\inst{2}\fnmsep
+       }
+
+\institute{Physik-Institut, University of Zurich, Winterthurerstrasse
   190, 8057 Zurich, Switzerland}
 
-\subject{xxxxx, xxxxx, xxxx}
+\date{}
 
-\keywords{xxxx, xxxx, xxxx}
+\abstract
+% context heading (optional)
+% {} leave it empty if necessary  
+{As the kilogram assumes its new definition in terms of $h,c,$ and the
+  standard second, it is interesting to think about a possible future
+  definition entirely in terms of fundamental constants.
+  A kilogram could, in principle, be defined as an integer multiple of
+  the Planck mass (or 4594????$\,\times\sqrt{\hbar c/G}$) without
+  significantly altering its current value.  The practical hurdle is
+  measuring $G$ four orders of magnitude better than currently known,
+  in order to fix the four unknown digits.}
+% aims heading (mandatory)
+{We assess the prospects for measuring $G$ to the desired accuracy
+  using an artificial two-body orbit.}
+% methods heading (mandatory)
+{We consider the simplest configuration, which would be a system
+  placed on a Trojan orbit to minimize external gravitational
+  perturbations, and enclosed in a cavity chilled to liquid-helium
+  temperatures, to suppress radiation pressure.}
+% results heading (mandatory)
+{Data analysis would involve marginalizing over at least 15~nuisance
+  parameters (6~for orbital parameters and 9~for fictitious forces)
+  but that, we show, is feasible.}
+% conclusions heading (optional), leave it empty if necessary 
+{We have not considered costs in this preliminary study, but more
+  complicated but more affordable scenarios in Earth orbit merit
+  investigation.}
 
-\corres{Michael Ebersold\\
-\email{michael.ebersold@uzh.ch}}
-
-
-\begin{abstract}
-As the kilogram assumes its new definition in terms of $h,c,$ and the
-standard second, it is interesting to think about a possible future
-definition entirely in terms of fundamental constants.  A kilogram
-could, in principle, be defined as an integer multiple of the Planck
-mass (or 4594????$\,\times\sqrt{\hbar c/G}$) without significantly
-altering its current value.  The practical hurdle is measuring $G$
-four orders of magnitude better than currently known, in order to fix
-the four unknown digits.  We assess the prospects for measuring $G$ to
-the desired accuracy using an artificial two-body orbit.  The simplest
-configuration would be a system placed on a Trojan orbit to minimize
-external gravitational perturbations, and enclosed in a cavity chilled
-to liquid-helium temperatures to suppress radiation pressure.  Data
-analysis would involve marginalizing over at least 15~nuisance
-parameters (6~for orbital parameters and 9~for fictitious forces) but
-that, we show, is feasible.  We have not considered the likely cost of
-a Trojan space mission in this simple study, but a more complicated
-scenario in Earth orbit should be taken seriously.
-\end{abstract}
+\keywords{}
 
 \maketitle
 
@@ -427,12 +442,11 @@ chosen so as to avoid chaotic orbits.  Whether a sufficiently detailed
 model for the tidal acceleration could be constructed and fitted to
 the two-body orbital data is an open question.
 
-\ack{We thank Scott Tremaine for comments.}
+\bigskip
 
-\def\nat{Nature}
-\def\prd{PRD}
+We thank Scott Tremaine for comments.
 
-\bibliographystyle{RS}
+\bibliographystyle{aa}
 \bibliography{ms.bib}
 
 \end{document}
