@@ -32,12 +32,12 @@
 % {} leave it empty if necessary  
 {As the kilogram assumes its new definition in terms of $h,c,$ and the
   standard second, it is interesting to think about a possible future
-  definition entirely in terms of fundamental constants.
-  A kilogram could, in principle, be defined as an integer multiple of
-  the Planck mass (or 4594????$\,\times\sqrt{\hbar c/G}$) without
-  significantly altering its current value.  The practical hurdle is
-  measuring $G$ four orders of magnitude better than currently known,
-  in order to fix the four unknown digits.}
+  definition entirely in terms of fundamental constants.  A kilogram
+  could, in principle, be defined as an integer multiple of the Planck
+  mass (or 4594????$\,\times\sqrt{\hbar c/G}$) without changing it
+  currently realizable value.  The practical hurdle is measuring $G$
+  four orders of magnitude better than now known, in order to fix the
+  four unknown digits.}
 % aims heading (mandatory)
 {We assess the prospects for measuring $G$ to the desired accuracy
   using an artificial two-body orbit.}
@@ -51,9 +51,10 @@
   parameters (6~for orbital parameters and 9~for fictitious forces)
   but that, we show, is feasible.}
 % conclusions heading (optional), leave it empty if necessary 
-{We have not considered costs in this preliminary study, but more
-  complicated but more affordable scenarios in Earth orbit merit
-  investigation.}
+{Artificial two-body orbits merit serious consideration as a method
+  for measuring $G$.  The configuration considered in this preliminary
+  study may be unrealistically expensive, but more complicated but
+  more affordable scenarios in Earth orbit may be practical.}
 
 \keywords{}
 
@@ -69,32 +70,33 @@ macroscopic scales: the Josephson effect makes $h/e$ measurable as a
 voltage-to-frequency ratio, while the quantum Hall effect makes
 $h/e^2$ a standard resistance (the von~Klitzing constant).  These
 enable electrical units to be defined in terms of $h$ and $e$.  A
-further ingenious instrument, known as a watt balance, precisely
-compares electrical and mechanical power, thus enabled mass to be
-standardized in terms of $h$.  For a simple introduction to the new
-SI, we refer the reader to the article on the ``LEGO watt
-balance'' \citep{Chao15}. The proposed redefinition of the kilogram is
-an explicit value for $h$ and $c$, but we can think of it as
+further ingenious instrument, known as a Kibble balance or watt
+balance, precisely compares electrical and mechanical power, thus
+enabled mass to be standardized in terms of $h$.  For a simple
+introduction to the new SI, we refer the reader to the article on the
+``LEGO watt balance'' \citep{Chao15}. The proposed redefinition of the
+kilogram is as an explicit value for $h$ and $c$, but we can think of
+it as
 \begin{equation}
-\mathrm{kg} \equiv 1.3563925\ldots \times 10^{50} \, \mathrm{s}^{-1}
-                   \times \frac{h}{c^2}
+\mathrm{kg} \equiv 8.52246550 \times 10^{50} \, \mathrm{s}^{-1}
+                   \times c^{-2} \hbar .
 \end{equation}
-with the exact value to be decided.  As we can see, the kilogram is
-coupled to the definition of a second.  That is not a problem in
-practice, as the second is standardized orders of magnitude better
-than any other unit.  Nonetheless, it is interesting to consider a
-logical further step of decoupling the kilogram from other
-definitions.  This could be done by introducing the gravitational
-constant, since $\sqrt{hc/G}$ has dimensions of mass.  Historically,
-there have been several proposed unit systems that included $G$ in
-some way \citep[for a review, see][]{Tomilin1999}, but the idea of
-including both gravity and quantum mechanics in a unit system comes
-from \cite{Planck99}. In the process of working towards the
-radiation law, Planck realized that $c,G,h$ and the Boltzmann constant
-$k_B$ (in his notation $G\rightarrow f$, $h\rightarrow b$,
-$h/k_B\rightarrow a$) naturally define units for mass, length, time,
-and temperature.  Indeed, Planck remarked that such units would be
-meaningful even in non-human and extraterrestrial cultures.
+As we can see, the kilogram is coupled to the definition of a second.
+That is not a problem in practice, as the second is standardized
+orders of magnitude better than any other unit.  Nonetheless, it is
+interesting to consider a logical further step of decoupling the
+kilogram from other definitions.  This could be done by introducing
+the gravitational constant, since $\sqrt{hc/G}$ has dimensions of
+mass.  Historically, there have been several proposed unit systems
+that included $G$ in some way \citep[for a review,
+  see][]{Tomilin1999}, but the idea of including both gravity and
+quantum mechanics in a unit system comes from \cite{Planck99}. In the
+process of working towards the radiation law, Planck realized that
+$c,G,h$ and the Boltzmann constant $k_B$ (in his notation
+$G\rightarrow f$, $h\rightarrow b$, $h/k_B\rightarrow a$) naturally
+define units for mass, length, time, and temperature.  Indeed, Planck
+remarked that such units would be meaningful even in non-human and
+extraterrestrial cultures.
 
 A hypothetical Planckian SI unit system would have
 \begin{equation} \label{eq:defs}
@@ -118,11 +120,12 @@ The Planck length, time, and temperature in themselves are extreme
 scales, not probed by any known physical process, and presumably the
 regime of quantum gravity.  But extreme scales do not harm if they are
 only part of some expression, as they are here.  The Planck mass is
-small but microscopically measurable: $\sim20\mu\mathrm{g}$.  This is
-of the same order as the uncertainty in the prototype kilogram
-itself.\footnote{\url{<https://www.bipm.org/utils/common/pdf/cms_m.pdf>}}
-Hence the kilogram could be redefined as an integer multiple of the
-Planck mass, without significantly perturbing its value.
+small but microscopically measurable: $\sim20\,\mu\mathrm{g}$.  This
+is of the same order as the uncertainty in the old prototype
+kilogram\footnote{\url{<https://www.bipm.org/utils/common/pdf/cms_m.pdf>}}
+and the uncertainty in watt-balance experiments.  Hence the kilogram
+could be redefined as an integer multiple of the Planck mass, without
+significantly perturbing its value.
 
 The difficulty with Eq.~\eqref{eq:defs} is that all the expressions
 involve $G$.  Given the current uncertainties in $G$ \citep{CODATA17},
@@ -163,13 +166,13 @@ of the Sun \citep{Ch-Dalsgaard05}, but this strategy does not yet give
 competitive accuracy in $G$.
 
 \subsection{An artificial two-body gravitating system}
-Newton's law of gravitation does not only explain why an apple falls
-down from a tree, it also explains orbits. If one has two bodies of
-masses $m_1$ and $m_2$, on which the only force acting is their
-respective gravitational attraction, they will orbit around the common
-center of mass, with the relative vector tracing an ellipse
-described by Kepler's laws. The third law, relates the
-orbital period $P$ to semimajor axis $a$ of the ellipse, as
+Newton's law of gravitation explains not only why an apple falls down
+from a tree, but also orbits. If one has two bodies of masses $m_1$
+and $m_2$, on which the only force acting is their respective
+gravitational attraction, they will orbit around the common center of
+mass, with the relative vector tracing an ellipse described by
+Kepler's laws. The third law, relates the orbital period $P$ to
+semimajor axis $a$ of the ellipse, as
 \begin{equation}\label{eq:kepler3}
 P^2 = \frac{4 \, \pi^2}{G(m_1+m_2)}a^3
 \end{equation}
@@ -223,7 +226,7 @@ Using the Stefan-Boltzmann law, we can relate radiation pressure to the temperat
 \begin{equation}
 F = \frac{2 \pi^6 d^2 {k_\mathrm{B}}^4 T^4}{45 c^3 h^3}.
 \end{equation}
-As we can see, this force is highly temperature dependent. In order to minimize this influence, one should deploy a temperature as small as possible in the cavity. In fact, if a cooling system based on liquid helium is installed, temperature can be brought down to about 4 K. Such a low temperature results in a force on the balls in the order of $10^{-16}$~N. Compared to the gravitational force, this is orders of magnitude less and thus we don't have to worry about effects of radiation pressure.
+As we can see, this force is highly temperature dependent. In order to minimize this influence, one should deploy a temperature as small as possible in the cavity. In fact, if a cooling system based on liquid helium is installed, temperature can be brought down to about 4 K. Such a low temperature results in a force on the balls in the order of $10^{-16}$~N.   This is $\sim10^{-9}$ of the gravitational force, and thus we don't have to further model the effects of radiation pressure.
 
 \textbf{Influence of the position measurement:} 
 The photons of the laser that measures the position of the two balls exert an additional force. If a laser with a power of 1~mW is used and not more than five measurements every second are performed, the force on the balls is in the same order as the influence of thermal radiation and thus negligible too.
@@ -242,7 +245,7 @@ In this formula, $\vec{\omega}$ is the angular velocity vector of the rotating f
 
 \textbf{Centrifugal and tidal forces:}
 \label{sec:tidal}
-The free fall condition is not possible to achieve for both masses simultaneously since we are in a non-inertial, rotating frame and therefore have to account for centrifugal forces. The centrifugal acceleration $\ddot{\vec{r}}_{\mathrm{Z}}$ is proportional to the distance vector $\vec{r}$ and scales with $\omega^2$, where $\omega$ is the angular velocity of the Sun-Earth reference frame:
+The free-fall condition is not possible to achieve for both masses simultaneously since we are in a non-inertial, rotating frame and therefore have to account for centrifugal forces. The centrifugal acceleration $\ddot{\vec{r}}_{\mathrm{Z}}$ is proportional to the distance vector $\vec{r}$ and scales with $\omega^2$, where $\omega$ is the angular velocity of the Sun-Earth reference frame:
 \begin{equation}
 \label{eq:centrifugalacc}
 \ddot{\vec{r}}_{\mathrm{Z}} = \vec{\omega} \times \left( \vec{\omega} \times \vec{r} \right) 
@@ -259,8 +262,9 @@ In this equation $M_\odot$ is the solar mass and $R$ is the radius of the orbit 
 where $P_\odot$ corresponds to one year, whereas $P$ is the orbital period of the two balls. So tidal and centrifugal effects are about $10^{-7}$ times smaller than the respective gravity of the two balls.
 
 \textbf{Gravitational field:}
-Much attention has to be paid to the effect of the gravitational field of the spacecraft itself and the measurement apparatus. This certainly can't be neglected, but with a clever design, its effects can be minimized. For example an almost spherically symmetric spacecraft would probably be a good choice. It should also be possible to calculate the gravitational field caused by the components of the spacecraft at the positions of the balls. Then one can correct the equation of motion by adding an extra term that is accounting for the gravitational field. \\
-A source of an additional gravitational field is Earth's moon and the other planets in the solar system. Fortunately, for this we don't need to correct if the whole system, consisting of the spacecraft and the two-body system, is moving through space together. Although, the spacecraft should be able to correct its position around the two balls to avoid a collision.
+Much attention has to be paid to the effect of the gravitational field of the spacecraft itself and the measurement apparatus. This certainly can't be neglected, but with a clever design, its effects can be minimized. For example an almost spherically symmetric spacecraft would probably be a good choice. It should also be possible to calculate the gravitational field caused by the components of the spacecraft at the positions of the balls. Then one can correct the equation of motion by adding an extra term accounting for the gravitational field.
+
+A source of an additional gravitational field is the Earth's moon and the other planets in the solar system. Fortunately, for this we don't need to correct if the whole system, consisting of the spacecraft and the two-body system, is moving through space together. However, the spacecraft should be able to correct its position around the two balls to avoid a collision.
 
 
 \section{Extracting $G$ from position measurement data}
@@ -303,8 +307,8 @@ for the two balls looks as follows:
 \ddot{\vec{r}} = - \frac{k\,\vec{r}}{r^3} - 2 \; \vec{\omega} \times \dot{\vec{r}} + C \cdot \vec{r}
 \end{equation}
 
-These are actually three coupled equations of motion, one for each spatial coordinate. Since all are second order differential equations, we need to give six initial conditions to determine the orbit.\\
-We choose our coordinate system such that the orbital plane of the two-body system is in the $x-y$ plane. $\vec{\omega}$ is a constant vector that points in the direction of the rotation axis of the Earth-Sun reference frame. We will fit for $\vec{\omega}$, so we don't have to know it exactly before, but it can be estimated well and thus provides good starting points for the fit. The same is valid for the six components of the matrix $C$.
+These are actually three coupled equations of motion, one for each spatial coordinate. Since all are second order differential equations, we need to give six initial conditions to determine the orbit.
+
 We choose our coordinate system such that the orbital plane of the two-body system is in the $x-y$ plane. $\vec{\omega}$ is a constant vector that points in the direction of the rotation axis of the Earth-Sun reference frame. We will fit for $\vec{\omega}$, so we don't have to know it exactly before, but it can be estimated well and thus provides good starting points for the fit. The same is valid for the six components of the matrix $C$.
 
 Counting all unknown parameters in the equation of motion, we get
@@ -384,20 +388,20 @@ The initial values for the positions can be guessed very accurately, since they 
 \end{table}
 
 In the next step, we set the parameters to a fixed ``true" value
-within the range estimated. We have to keep in mind that $k$, $x_0$
-and $v_{y_0}$ are linked together and there must not be contradictions
-in the true values. The chosen values are displayed in the right
+within the range estimated. We have to keep in mind that for given $k$
+and $x_0$, $v_{y_0}$ must be chosen to as to produce a nearly-circular
+orbit, as desired.  The chosen values are displayed in the right-hand
 column of Table~\ref{tab:parameters}.  To simulate data we would
 obtain from the position measurements, we integrate the equations of
 motion. The time for one orbit without perturbations can be estimated
 using Kepler's third law (\ref{eq:kepler3}). For the value of $k$
-assumed above and a semi-major axis of $0.15$~m, this
-results in an orbital period of roughly 12900 seconds or
-3.5 hours. Here we integrate two orbits in 100000
-steps, that would correspond to about 4 measurements per second,
-which should be feasible. To the generated data, we add Gaussian noise
-with a standard deviation of 10~nm. The value we use is just an estimate,
-it would depend strongly on the measurement system that has been used.
+assumed above and a semi-major axis of $0.15$~m, this results in an
+orbital period of roughly 12900 seconds or 3.5 hours. Here we
+integrate two orbits in 100000 steps, that would correspond to about 4
+measurements per second, which should be feasible. To the generated
+data, we add Gaussian noise with a standard deviation of 10~nm. The
+value we use is just an estimate, it would depend strongly on the
+measurement system that has been used.
 
 \begin{figure}%[ht]
 	\centering
@@ -421,11 +425,14 @@ constant $G$, and estimated the level of various disturbing effects
 and how to correct for them.  Simulating the measurement process and
 extraction of the gravitational constant indicates that $G$ could be
 estimated to about $10^{-7}$ relative uncertainty.  This is about a
-factor of 300 better than today's recommended CODATA value. A further increase in precision could be obtained by running the experiment longer. Measuring for 200 instead of two orbits could increase the precision by a factor of 10.
-Hence, about the same relative uncertainty as for Planck's constant
-$h$ \citep[$1.2 \cdot 10^{-8}$][]{CODATA17} could be achieved. This then
-would allow a future redefinition of the kilogram as an integer
-multiple of the Planck mass.
+factor of 300 better than today's recommended CODATA value. A further
+increase in precision could be obtained by running the experiment
+longer. Measuring for 200 instead of two orbits could increase the
+precision by a factor of 10.  Hence, about the same relative
+uncertainty as for Planck's constant $h$ \citep[$1.2 \cdot 10^{-8}$,
+  see][]{CODATA17} could be achieved. This then would allow a future
+redefinition of the kilogram as an integer multiple of the Planck
+mass.
 
 We have not attempted in this paper to consider the cost of such an
 experiment.  A mission to an Earth-Sun $L_4$ or $L_5$ with
