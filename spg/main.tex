@@ -8,7 +8,7 @@
        or what the new SI means for astronomy}
 
 \author{Prasenjit Saha} \email{psaha@physik.uzh.ch}
-\affiliation{Physik-Institut, University of Zurich\\
+\affiliation{Physik-Institut, University of Zurich,
   Winterthurerstr.~190, 8057~Zurich, Switzerland}
 
 \begin{abstract}
@@ -17,18 +17,24 @@ New freedom.
 
 \maketitle
 
-In 1899 Planck \cite{Planck1899}.
-Let $m=\sqrt{hc/G}$.
-$f \rightarrow G$, $b\rightarrow h$, $a\rightarrow h/k$
-Comes to $55\rm\,\mu g$.
+In 1899, during his struggle to understand blackbody radiation but
+about a year before he found the key, Planck proposed a curious set of
+units.\cite{Planck1899} In these natural units, as he called them, the
+unit of mass $m=\sqrt{hc/G}$ which comes to about $55\rm\,\mu g$.  The
+length unit is $h/(mc)$, the time unit is $h/(mc^2)$, while the
+temperature unit is $mc^2/k$.  (Reading the original today, one needs
+to substitute $f \rightarrow G$, $b\rightarrow h$, $a\rightarrow
+h/k$.)  Planck then declared that these units would be recognized by
+all cultures as fundamental, even extraterrestrial or non-human ones
+(ausserirdische und aussermenschliche Culturen).
 
-Not the first \cite{Tomilin1999} but most prescient.  SI
+Planck was by no means the only person to try 
+
+Not the first \cite{Tomilin1998} but most prescient.  SI
 \cite{Jeckelmann_2018}.  Leaves out $G$.  Also candela, sievert.
 
-Astros use Planckian units occasionally (with $\hbar$) but generally
-not.  Stories of cross-sections in gallons/Mpc.\footnote{A gallon/Mpc
-  is about a kilogram, but the exact value depends on which gallon.}
-Why?
+Astros use Planckian units occasionally\cite{magicenv} (with $\hbar$)
+but generally not.\cite{dodd2011}  Why?
 
 Solar mass in kg would be bad.  SI in astro has been a non-starter.
 But spacecraft dynamics uses $GM$ in SI.
@@ -37,10 +43,19 @@ New SI new freedoms.  eV not a new unit.  Density as
 $\!\unit{eV}\unit{m}^{-3}$ is fine.  Anarchy?  No, because conversions
 only through physical constants.
 
-For astros, don't need to express solar mass in kg.  But we'll get to
-that.
-
-First Light-second: au and pc.  Again, not a new unit.  Round like Pfund.
+For astronomy, the good news is that the SI no longer requires you to
+express the solar mass in kg --- but we'll get to that.  We remark
+first that distances in light-seconds are compliant with the new SI.
+Like the electronvolt, a light-second is not itself a unit, it is an
+abbreviated way of referring to the equivalent light travel time.  On
+the other hand, which astronomer would wish to lose the cultural
+legacies of the astronomical unit of length (au), and the parsec?
+Fortunately, metrology and cultural legacies can be reconciled.  To
+see how, we only to see how modern German has kept the old unit of a
+Pfund, but has rounded its meaning to exactly $500\unit{g}$.  The au
+and parsec have serendipitously round values: $1\unit{au}\simeq
+c\times500\unit{s}$ to better than 1\%, while a parsec is just 3\%
+over $c\times10^8\unit{s}$.  
 
 In the astronomy literature one finds many named units (\AA ngström,
 gauss, jansky) that are simply powers of 10 times SI units, which need
@@ -61,12 +76,30 @@ invariably counters of photons, it makes sense to simply use photon
 fluxes rather than optical magnitudes, with ``rounded'' magnitudes
 used for historical comprehension.
 
-Gravity-second $GM/c^3$ (pulsars).  Strange formulations.
-Dimensionless velocity ok.  But density $\rho$ as $s^{-2}$ seems
-strange.  But $(G\rho)^{-1/2}$ is a time scale.  And gravity-second
-per second is a power.  Basically, avoid explicit $G$ in pure
-gravitational phenomena.  Explicit $G$ only when gravity and non-grav
-processes both appear.
+Now we come to the kilogram, or avoiding the kilogram when necessary.
+Spacecraft dynamics has long used the so-called solar mass parameter
+$GM_\odot$ in $\!\unit{m}^3\unit{s}^{-2}$, which is known to eight
+significant digits in Newtonian gravity, two more with general
+relativity.  In pulsar timing, $GM_\odot/c^3$ in seconds is usual.  In
+the new SI, by analogy with electronvolts, we can meaningfully measure
+mass as $GM/c^3$ in ``gravity-seconds''.  The solar mass is about
+5~micro-(gravity)-seconds.  This does not mean that kilograms are to
+be avoided in astrophysics.  Rather, gravity-seconds can be useful
+where kilograms would needlessly propagate the uncertainty in $G$,
+which is typically the case for orbital processes.  Together with
+distances in light-seconds and dimensionless velocities,
+gravity-seconds allow for some elegant simplifications in the
+description of all kinds of orbital processes, classical and
+relativistic.\cite{2020PASP..132b1001S} Some constructions arise, that
+seem {\em very} strange at first: in particular density in
+gravity-seconds per cubic light-seconds, or power in gravity-seconds
+per second.  But these are not really unphysical at all.  In
+gravitational phenomena, a density $\rho$ is always associated with a
+time scale $(G\rho)^{-1/2}$, so density as frequency squared does make
+sense.  As for dimensionless power in gravity-seconds per second, this
+is just power in units of the well-known Planck power $c^5/G$, which
+is the luminosity scale in gravitational waves for merging black
+holes, irrespective of their mass.
 
 In the 120 years since Planck speculated about it, we have yet to make
 contact with non-human or extra-terrestrial cultures, and ask them if
@@ -88,8 +121,7 @@ us.
 \def\apjl{ApJL}
 \def\aap{A\&A}
 \def\mnras{MNRAS}
-\def\pasj{PASJ}
-\def\jgr{JGR}
+\def\pasp{PASP}
 
 \bibliographystyle{apsrev4-1}
 \bibliography{refs.bib}
