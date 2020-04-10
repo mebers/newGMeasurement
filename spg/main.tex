@@ -146,41 +146,76 @@ sun is well known to be $1.75\unit{arcsec}$ and its first measurement
 a century ago is the stuff of legend.\cite{Kennefick2012} Knowing the
 solar mass in gravity-seconds and approximating the solar radius as
 $R_\odot\approx c\times2\unit{s}$, we can trivially work out the
-gravitational deflection angle $\alpha=4GM_\odot/(c^2 R_\odot)$ as
-$\approx10^{-5}\unit{radians}$, which is indeed a little under
-$2\unit{arcsec}$.  If we go far-enough from the sun that its apparent
+gravitational deflection angle $\alpha=4GM_\odot/(c^2 R_\odot)
+\approx10^{-5}\unit{radians}$, which is indeed a little under
+$2\unit{arcsec}$.  If we go far enough from the sun that its apparent
 radius on the sky becomes smaller than the deflection angle, a
-remarkable phenomenon will be seen: light sources precisely behind the
-sun will appear as luminous rings (known as Einstein rings) around the
-sun.  The threshold distance to see an Einstein ring is
+remarkable phenomenon will present itself: light sources precisely
+behind the sun will appear as luminous rings (known as Einstein rings)
+around the sun.  The threshold distance to see an Einstein ring is
 $R_\odot/\alpha\approx c\times2\times10^5\unit{s}$ or $\approx
 400\unit{au}$.  (Actually about $550\unit{au}$ with less drastic
-approximations.)
+approximations.)  The advantage of an Einstein ring is that it
+enormously magnifies the source, so much so that a $1\unit{m}$
+telescope located at the right place in deep space could resolve
+features down to $10\unit{km}$ on an exoplanet at 30~parsecs.  That
+level of detail is comparable to what the Hubble Space Telescope can
+see on Mars.  The image-reconstruction problem involved would be a
+major challenge in its own right, because the magnification produced
+by Einstein rings is highly anisotropic, but simulations indicate that
+it is solvable and that images could indeed be obtained.  The task
+that remains, then, is to fly a fleet of space telescopes to
+appropriate locations beyond $500\unit{au}$.  And within one lifetime,
+if possible, please.  The currently most promising strategy for doing
+this turns out to be (who would have guessed?) solar sails.  Solar
+sails also provide a nice example of how kilograms and gravity-seconds
+can co-exist.  Radiation pressure from the sun is, like gravity,
+inverse squared in the distance.  Hence the acceleration on a
+spacecraft with a solar sail will take the form
+$$ \frac{S\,F_\odot}{r^2} - \frac{GM_\odot}{r^2} $$ where $r$ is the
+distance from the sun, $F_\odot/r^2$ is the radiation pressure from
+the sun, and $S$ is the effective sail area per unit mass.  For
+simplicity we are neglecting the gravity of the planets and further
+non-gravitational perturbations.  The solar-sail term in effect
+reduces the gravitating mass of the sun, and could even reverse its
+sign if $S$ is large enough.  Let us consider both terms at
+$r=r_\oplus=1\unit{au}$.  Knowing the solar mass in gravity-seconds we
+easily get $GM_\odot/r_\oplus^2\approx6\unit{mm}\unit{s}^{-2}$.  To
+estimate $F_\odot/r_\oplus^2$ a convenient way is to recall the solar
+constant, which is the energy flux from the Sun at the top of the
+Earth's atmosphere.  This energy flux is, of course, in photons, and
+the energy of a photon is $c$ times its momentum.  Holding up a mirror
+normal to sunlight reflects the photons and imparts twice their
+momentum to the mirror.  Hence, multiplying the solar constant by
+$2/c$ gives the pressure on an optimally-aligned solar sail
+$1\unit{au}$ from the sun.  The value of the solar constant
+$1361\unit{W}\unit{m}^{-2}$ with small variations which we will
+disregard here, and the corresponding pressure will be a little under
+$10^{-5}\unit{Pa}$.  Comparing the terms, we see that we would need
+$S\approx 600\unit{m}^2\unit{kg}^{-1}$ to make the sun a net repeller.
+This may or may not be technologically feasible, but it is actually
+not necessary, thanks to a further cunning plan.  This is to first
+plunge the spacecraft in a very eccentric orbit close to the sun, and
+then at perihelion deploy the solar sail.  Without the solar sail, the
+spacecraft would simply have returned to repeat the orbit, but now it
+can sail out of the solar system on its mission to the focal region of
+the solar gravity lens.
 
-$g_{\odot/\oplus} \approx 6\times10^{-3}\unit{m}\unit{s}^{-2}$
-
-$P_{\odot/\oplus} \approx 10^{-5}\unit{Pa}$
-
-Would need $\approx 600\unit{m}^2\unit{kg}^{-1}$ to make the sun a
-net repeller.
-
-Cunning hybrid.
-
-In the 120 years since Planck speculated about it, we have yet to make
-contact with non-human or extra-terrestrial cultures, and ask them if
-they indeed share Planck's views on units.  What {\em has} happened,
-however, is that physical constants have turned out to have meanings
-not even Planck in 1899 had imagined.  As we all know, the following
-year Planck himself discovered that $h$ (formerly known as $b$) was
-about quantization.  A few years later the formal relation between
-mass and energy through $c^2$ turned out to be real.  Starting in the
-1920s $(hc/G)^{-2}\times(\hbox{proton mass})^3$ was
-discovered to be the mass scale of stars.  Later in the 20th century,
-$2e/h$ and $h/e^2$ turned out to be macroscopically observable as
-Josephson's constant and von~Klitzing's constant.  And just in the
-last few years, $c^5/G$ has been observed to be the power-output scale
-for merging black holes.  We can only wonder what more surprises await
-us.
+Even with such a daring space mission, it will probably be some time
+before we make contact with non-human or extra-terrestrial cultures,
+so that we can ask them if they indeed share Planck's views on units.
+Yet in the 120 years since Planck drew special attention to physical
+constants, they have turned out to have meanings not even Planck in
+1899 had imagined.  As we all know, the following year Planck himself
+discovered that $h$ (formerly known as $b$) was about quantization.  A
+few years later the formal relation between mass and energy through
+$c^2$ turned out to be real.  Starting in the 1920s
+$(hc/G)^{3/2}\times(\hbox{proton mass})^{-2}$ was discovered to be the
+mass scale of stars.  Later in the 20th century, $2e/h$ and $h/e^2$
+turned out to be macroscopically observable as Josephson's constant
+and von~Klitzing's constant.  And just in the last few years, $c^5/G$
+has been observed to be the power-output scale for merging black
+holes.  We can only wonder what more surprises await us.
 
 \def\aj{AJ}
 \def\apjl{ApJL}
@@ -189,8 +224,8 @@ us.
 \def\pasp{PASP}
 
 \bibliographystyle{apsrev4-1}
-%\bibliography{main.bbl}
-\bibliography{refs.bib}
+\bibliography{main.bbl}
+%\bibliography{refs.bib}
 
 \end{document}
 
