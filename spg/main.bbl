@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{8}%
+\begin{thebibliography}{9}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -60,10 +60,12 @@
 \bibitem [{\citenamefont {Tomilin}(1998)}]{Tomilin1998}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
-  {Tomilin}},\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {{Proceedings,
-  21st International Workshop on the Fundamental Problems of High-Energy
-  Physics and Field Theory}: {Protvino, Russia, June 23-25, 1998}}}}\ (\bibinfo
-  {year} {1998})\ pp.\ \bibinfo {pages} {287--296}\BibitemShut {NoStop}%
+  {Tomilin}},\ }\enquote {\bibinfo {title} {{Natural Systems of Units. To the
+  Centenary Anniversary of the Planck System}},}\ in\ \href@noop {} {\emph
+  {\bibinfo {booktitle} {{Proceedings, 21st International Workshop on the
+  Fundamental Problems of High-Energy Physics and Field Theory}: {Protvino,
+  Russia, June 23-25, 1998}}}}\ (\bibinfo {year} {1998})\ pp.\ \bibinfo {pages}
+  {287--296}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Jeckelmann}(2018)}]{Jeckelmann_2018}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
@@ -126,4 +128,17 @@
   {\bibinfo  {journal} {arXiv e-prints}\ ,\ \bibinfo {eid} {arXiv:2002.11871}}
   (\bibinfo {year} {2020})},\ \Eprint {http://arxiv.org/abs/2002.11871}
   {arXiv:2002.11871 [astro-ph.IM]} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kennefick}(2012)}]{Kennefick2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Kennefick}},\ }\enquote {\bibinfo {title} {Not only because of theory:
+  Dyson, {E}ddington, and the competing myths of the 1919 eclipse
+  expedition},}\ in\ \href {\doibase 10.1007/978-0-8176-4940-1_9} {\emph
+  {\bibinfo {booktitle} {Einstein and the Changing Worldviews of Physics}}},\
+  \bibinfo {editor} {edited by\ \bibinfo {editor} {\bibfnamefont
+  {C.}~\bibnamefont {Lehner}}, \bibinfo {editor} {\bibfnamefont
+  {J.}~\bibnamefont {Renn}}, \ and\ \bibinfo {editor} {\bibfnamefont
+  {M.}~\bibnamefont {Schemmel}}}\ (\bibinfo  {publisher} {Birkh{\"a}user
+  Boston},\ \bibinfo {address} {Boston},\ \bibinfo {year} {2012})\ pp.\
+  \bibinfo {pages} {201--232}\BibitemShut {NoStop}%
 \end{thebibliography}%

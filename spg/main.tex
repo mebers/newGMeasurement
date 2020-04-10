@@ -131,19 +131,37 @@ well-known Planck power $c^5/G$, which is the luminosity scale in
 gravitational waves for merging black holes, irrespective of their
 mass.
 
-Solar grav lens.\cite{2020arXiv200211871T}
+To illustrate working with the new SI in astronomy, let us consider an
+example that sounds like science fiction, but is in fact a serious
+design study: the solar gravity lens
+mission.\cite{2020arXiv200211871T} It envisions a telescope larger
+than the solar system with the sun's gravitational field as its main
+lens, for mapping the surfaces of extra-solar planets.  The essential
+physical effect is that light rays going past the sun with impact
+parameter $R$ are gravitationally deflected by an angle
+$4GM_\odot/(c^2 R)$.  In particular, the deflection of light from a
+star that is barely covered by the sun will make that star appear to
+be just outside the rim of the sun.  The deflection at the rim of the
+sun is well known to be $1.75\unit{arcsec}$ and its first measurement
+a century ago is the stuff of legend.\cite{Kennefick2012} Knowing the
+solar mass in gravity-seconds and approximating the solar radius as
+$R_\odot\approx c\times2\unit{s}$, we can trivially work out the
+gravitational deflection angle $\alpha=4GM_\odot/(c^2 R_\odot)$ as
+$\approx10^{-5}\unit{radians}$, which is indeed a little under
+$2\unit{arcsec}$.  If we go far-enough from the sun that its apparent
+radius on the sky becomes smaller than the deflection angle, a
+remarkable phenomenon will be seen: light sources precisely behind the
+sun will appear as luminous rings (known as Einstein rings) around the
+sun.  The threshold distance to see an Einstein ring is
+$R_\odot/\alpha\approx c\times2\times10^5\unit{s}$ or $\approx
+400\unit{au}$.  (Actually about $550\unit{au}$ with less drastic
+approximations.)
 
-$\alpha_\odot=4GM_\odot/(c^2 R_\odot)$.  $R_\odot\approx
-c\times2\unit{s}$.  Comes to $\approx10^{-5}\unit{radians}$.
+$g_{\odot/\oplus} \approx 6\times10^{-3}\unit{m}\unit{s}^{-2}$
 
-Caustic at $R_\odot/\alpha_\odot$.  This is $\approx
-c\times2\times10^5\unit{s}$ or $400\unit{au}$.  (Actually
-$550\unit{au}$.)
+$P_{\odot/\oplus} \approx 10^{-5}\unit{Pa}$
 
-$$ g_{\odot/\oplus} \approx 6\times10^{-3}\unit{m}\unit{s}^{-2} $$
-$$ P_{\odot/\oplus} \approx 5\times10^{-6}\unit{Pa} $$
-
-Would need $\approx 10^3\unit{m}^2\unit{kg}^{-1}$ to make the sun a
+Would need $\approx 600\unit{m}^2\unit{kg}^{-1}$ to make the sun a
 net repeller.
 
 Cunning hybrid.
@@ -171,7 +189,8 @@ us.
 \def\pasp{PASP}
 
 \bibliographystyle{apsrev4-1}
-\bibliography{main.bbl}
+%\bibliography{main.bbl}
+\bibliography{refs.bib}
 
 \end{document}
 
